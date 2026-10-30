@@ -1,0 +1,300 @@
+{
+  "concepto": "v3_aro",
+  "parametros": {
+    "densidad_espuma_kg_l": 0.03,
+    "piel_kg_m2": 0.3,
+    "masa_motor_kg": 0.045,
+    "masa_helice_kg": 0.009,
+    "masa_rejilla_kg": 0.022,
+    "masa_frame_kg": 0.22,
+    "k_ducto": 1.1,
+    "k_rejilla": 0.85,
+    "abertura_rejilla": 0.006,
+    "alambre_rejilla": 0.0018,
+    "cargas_persona_n": [
+      40.0,
+      100.0
+    ],
+    "carga_render_n": 40.0,
+    "viento_rafaga_ms": 14.0,
+    "cd": 1.1,
+    "angle_max_deg": 45.0,
+    "k_giro_ducto": 0.6,
+    "cp_excentricidad": 0.12,
+    "helice_pulg": 6,
+    "kg_por_motor": 1.5,
+    "holgura_punta": 0.003,
+    "pared_ducto": 0.02,
+    "alto": 0.09,
+    "radio_medio": 0.29,
+    "cinta_ancho": 0.02,
+    "pos_bateria": [
+      0.29,
+      0.0,
+      0.0
+    ],
+    "pos_caja": [
+      -0.29,
+      0.0,
+      0.0
+    ],
+    "punto_agarre": [
+      0.0,
+      0.29,
+      0.0
+    ],
+    "agarres_extra": {
+      "canto_exterior": [
+        0.0,
+        0.3692,
+        0.0
+      ]
+    },
+    "brazo_cabeceo_m": 0.20506096654409878
+  },
+  "volumen_estanco_l": 22.39,
+  "masa_kg": 2.418,
+  "cg_mm": [
+    16.8,
+    0.0,
+    0.3
+  ],
+  "cb_espuma_mm": [
+    -0.1,
+    0.1,
+    0.3
+  ],
+  "masa_detalle": [
+    {
+      "pieza": "espuma EPP",
+      "kg": 0.63,
+      "nota": "EPP de celda cerrada, unos 30 g/L (aprox., a validar)"
+    },
+    {
+      "pieza": "piel y pintura",
+      "kg": 0.277,
+      "nota": "recubrimiento elástico sobre la espuma (aprox., a validar)"
+    },
+    {
+      "pieza": "batería LiPo 6S 3000 mAh",
+      "kg": 0.48,
+      "nota": "vuelo de pocos minutos, en el agua solo queda la baliza. LiPo de FPV para dar la corriente de pico (aprox., a validar)"
+    },
+    {
+      "pieza": "caja estanca central",
+      "kg": 0.18,
+      "nota": "PETG con tapa y o-ring (aprox., a validar)"
+    },
+    {
+      "pieza": "controladora, ESC, GPS, radios",
+      "kg": 0.1,
+      "nota": "aprox., a validar"
+    },
+    {
+      "pieza": "computadora y cámara a bordo (D-021)",
+      "kg": 0.06,
+      "nota": "aprox., a validar"
+    },
+    {
+      "pieza": "baliza, buzzer, sensor de agua, cableado",
+      "kg": 0.08,
+      "nota": "aprox., a validar"
+    },
+    {
+      "pieza": "estructura de carbono",
+      "kg": 0.22,
+      "nota": "brazos o aro de carbono embebidos (aprox., a validar)"
+    },
+    {
+      "pieza": "motor 1",
+      "kg": 0.045,
+      "nota": "motor brushless para agua de mar (aprox., a validar)"
+    },
+    {
+      "pieza": "hélice 1",
+      "kg": 0.009,
+      "nota": "aprox., a validar"
+    },
+    {
+      "pieza": "rejillas ducto 1",
+      "kg": 0.044,
+      "nota": "arriba y abajo (aprox., a validar)"
+    },
+    {
+      "pieza": "motor 2",
+      "kg": 0.045,
+      "nota": "motor brushless para agua de mar (aprox., a validar)"
+    },
+    {
+      "pieza": "hélice 2",
+      "kg": 0.009,
+      "nota": "aprox., a validar"
+    },
+    {
+      "pieza": "rejillas ducto 2",
+      "kg": 0.044,
+      "nota": "arriba y abajo (aprox., a validar)"
+    },
+    {
+      "pieza": "motor 3",
+      "kg": 0.045,
+      "nota": "motor brushless para agua de mar (aprox., a validar)"
+    },
+    {
+      "pieza": "hélice 3",
+      "kg": 0.009,
+      "nota": "aprox., a validar"
+    },
+    {
+      "pieza": "rejillas ducto 3",
+      "kg": 0.044,
+      "nota": "arriba y abajo (aprox., a validar)"
+    },
+    {
+      "pieza": "motor 4",
+      "kg": 0.045,
+      "nota": "motor brushless para agua de mar (aprox., a validar)"
+    },
+    {
+      "pieza": "hélice 4",
+      "kg": 0.009,
+      "nota": "aprox., a validar"
+    },
+    {
+      "pieza": "rejillas ducto 4",
+      "kg": 0.044,
+      "nota": "arriba y abajo (aprox., a validar)"
+    }
+  ],
+  "flotacion_total_n": 225.2,
+  "reserva_flotacion_n": 201.5,
+  "calado_mm": 9.8,
+  "francobordo_mm": 78.2,
+  "persona_agarrada": {
+    "carga_maxima_antes_de_pararse_n": 72.4,
+    "a_los_deg": 88,
+    "carga_para_escora_n": {
+      "10_deg": 55.2,
+      "20_deg": 66.8,
+      "30_deg": 68.3
+    },
+    "escora_con_40_n_deg": 6.2,
+    "escora_con_100_n_deg": 90.0,
+    "carga_maxima_agarre_canto_exterior_n": 50.8
+  },
+  "gz_mm": [
+    [
+      0,
+      -0.0
+    ],
+    [
+      10,
+      278.1
+    ],
+    [
+      20,
+      285.3
+    ],
+    [
+      30,
+      269.4
+    ],
+    [
+      40,
+      241.6
+    ],
+    [
+      50,
+      203.9
+    ],
+    [
+      60,
+      159.1
+    ],
+    [
+      70,
+      109.1
+    ],
+    [
+      80,
+      55.3
+    ],
+    [
+      90,
+      -0.0
+    ],
+    [
+      100,
+      -55.4
+    ],
+    [
+      110,
+      -109.0
+    ],
+    [
+      120,
+      -159.1
+    ],
+    [
+      130,
+      -203.8
+    ],
+    [
+      140,
+      -241.3
+    ],
+    [
+      150,
+      -269.1
+    ],
+    [
+      160,
+      -285.0
+    ],
+    [
+      170,
+      -277.8
+    ],
+    [
+      180,
+      -19.2
+    ]
+  ],
+  "area_frontal_m2": {
+    "cabeceo_0": 0.0729,
+    "cabeceo_25": 0.2108
+  },
+  "viento": {
+    "rafaga_ms": 14.0,
+    "cd_canto": 1.1,
+    "area_planta_m2": 0.2826,
+    "area_canto_m2": 0.0729,
+    "inclinacion_deg": 46.1,
+    "fuerza_normal_cara_n": 37.3,
+    "arrastre_rotores_n": 15.0,
+    "empuje_necesario_n": 71.5,
+    "empuje_disponible_n": 55.0,
+    "momento_cabeceo_nm": 2.69,
+    "autoridad_cabeceo_nm": 0.0,
+    "viento_max_sostenible_ms": 10.25,
+    "nota": "placa plana con Cn y centro de presión aprox., a validar en túnel o en vuelo"
+  },
+  "empuje": {
+    "motores": 4,
+    "kg_por_motor_libre": 1.5,
+    "k_ducto": 1.1,
+    "k_rejilla": 0.85,
+    "empuje_total_n": 55.0,
+    "nota": "empuje por motor, ganancia del ducto y pérdida de rejilla: aprox., a validar en banco"
+  },
+  "relacion_empuje_peso": 2.32,
+  "rejilla": {
+    "abertura_mm": 6.0,
+    "distancia_helice_mm": 29.0,
+    "iso_13857": "ranura de 4 a 6 mm pide 10 mm de distancia (tabla 4, 14 años o más)"
+  },
+  "dimensiones_mm": {
+    "diametro_o_largo": 778,
+    "alto": 90
+  }
+}

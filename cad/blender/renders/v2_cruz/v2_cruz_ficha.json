@@ -1,0 +1,293 @@
+{
+  "concepto": "v2_cruz",
+  "parametros": {
+    "densidad_espuma_kg_l": 0.03,
+    "piel_kg_m2": 0.3,
+    "masa_motor_kg": 0.055,
+    "masa_helice_kg": 0.012,
+    "masa_rejilla_kg": 0.03,
+    "masa_frame_kg": 0.15,
+    "k_ducto": 1.1,
+    "k_rejilla": 0.85,
+    "abertura_rejilla": 0.006,
+    "alambre_rejilla": 0.0018,
+    "cargas_persona_n": [
+      40.0,
+      100.0
+    ],
+    "carga_render_n": 40.0,
+    "viento_rafaga_ms": 14.0,
+    "cd": 1.1,
+    "angle_max_deg": 45.0,
+    "k_giro_ducto": 0.6,
+    "cp_excentricidad": 0.12,
+    "helice_pulg": 7,
+    "kg_por_motor": 2.0,
+    "holgura_punta": 0.003,
+    "radio_ductos": 0.34,
+    "pared_ducto": 0.024,
+    "alto_ducto": 0.08,
+    "radio_cubo": 0.11,
+    "alto_cubo": 0.13,
+    "radio_brazo": 0.05,
+    "cinta_ancho": 0.02,
+    "punto_agarre": [
+      0.0,
+      0.19905,
+      0.0
+    ],
+    "agarres_extra": {
+      "collar": [
+        0.0,
+        0.4559,
+        0.0
+      ]
+    },
+    "brazo_cabeceo_m": 0.17000000000000004
+  },
+  "volumen_estanco_l": 12.45,
+  "masa_kg": 2.105,
+  "cg_mm": [
+    0.0,
+    0.0,
+    -1.6
+  ],
+  "cb_espuma_mm": [
+    0.1,
+    0.1,
+    0.0
+  ],
+  "masa_detalle": [
+    {
+      "pieza": "espuma EPP",
+      "kg": 0.328,
+      "nota": "EPP de celda cerrada, unos 30 g/L (aprox., a validar)"
+    },
+    {
+      "pieza": "piel y pintura",
+      "kg": 0.218,
+      "nota": "recubrimiento elástico sobre la espuma (aprox., a validar)"
+    },
+    {
+      "pieza": "batería LiPo 6S 3000 mAh",
+      "kg": 0.48,
+      "nota": "vuelo de pocos minutos, en el agua solo queda la baliza. LiPo de FPV para dar la corriente de pico (aprox., a validar)"
+    },
+    {
+      "pieza": "caja estanca central",
+      "kg": 0.18,
+      "nota": "PETG con tapa y o-ring (aprox., a validar)"
+    },
+    {
+      "pieza": "controladora, ESC, GPS, radios",
+      "kg": 0.1,
+      "nota": "aprox., a validar"
+    },
+    {
+      "pieza": "computadora y cámara a bordo (D-021)",
+      "kg": 0.06,
+      "nota": "aprox., a validar"
+    },
+    {
+      "pieza": "baliza, buzzer, sensor de agua, cableado",
+      "kg": 0.08,
+      "nota": "aprox., a validar"
+    },
+    {
+      "pieza": "estructura de carbono",
+      "kg": 0.15,
+      "nota": "brazos o aro de carbono embebidos (aprox., a validar)"
+    },
+    {
+      "pieza": "motor 1",
+      "kg": 0.055,
+      "nota": "motor brushless para agua de mar (aprox., a validar)"
+    },
+    {
+      "pieza": "hélice 1",
+      "kg": 0.012,
+      "nota": "aprox., a validar"
+    },
+    {
+      "pieza": "rejillas ducto 1",
+      "kg": 0.06,
+      "nota": "arriba y abajo (aprox., a validar)"
+    },
+    {
+      "pieza": "motor 2",
+      "kg": 0.055,
+      "nota": "motor brushless para agua de mar (aprox., a validar)"
+    },
+    {
+      "pieza": "hélice 2",
+      "kg": 0.012,
+      "nota": "aprox., a validar"
+    },
+    {
+      "pieza": "rejillas ducto 2",
+      "kg": 0.06,
+      "nota": "arriba y abajo (aprox., a validar)"
+    },
+    {
+      "pieza": "motor 3",
+      "kg": 0.055,
+      "nota": "motor brushless para agua de mar (aprox., a validar)"
+    },
+    {
+      "pieza": "hélice 3",
+      "kg": 0.012,
+      "nota": "aprox., a validar"
+    },
+    {
+      "pieza": "rejillas ducto 3",
+      "kg": 0.06,
+      "nota": "arriba y abajo (aprox., a validar)"
+    },
+    {
+      "pieza": "motor 4",
+      "kg": 0.055,
+      "nota": "motor brushless para agua de mar (aprox., a validar)"
+    },
+    {
+      "pieza": "hélice 4",
+      "kg": 0.012,
+      "nota": "aprox., a validar"
+    },
+    {
+      "pieza": "rejillas ducto 4",
+      "kg": 0.06,
+      "nota": "arriba y abajo (aprox., a validar)"
+    }
+  ],
+  "flotacion_total_n": 125.2,
+  "reserva_flotacion_n": 104.5,
+  "calado_mm": 34.1,
+  "francobordo_mm": 93.9,
+  "persona_agarrada": {
+    "carga_maxima_antes_de_pararse_n": 37.8,
+    "a_los_deg": 86,
+    "carga_para_escora_n": {
+      "10_deg": 26.8,
+      "20_deg": 31.5,
+      "30_deg": 33.0
+    },
+    "escora_con_40_n_deg": 90.0,
+    "escora_con_100_n_deg": 90.0,
+    "carga_maxima_agarre_collar_n": 15.5
+  },
+  "gz_mm": [
+    [
+      0,
+      -0.0
+    ],
+    [
+      10,
+      187.6
+    ],
+    [
+      20,
+      228.6
+    ],
+    [
+      30,
+      222.1
+    ],
+    [
+      40,
+      200.6
+    ],
+    [
+      50,
+      170.0
+    ],
+    [
+      60,
+      133.1
+    ],
+    [
+      70,
+      91.8
+    ],
+    [
+      80,
+      47.7
+    ],
+    [
+      90,
+      1.7
+    ],
+    [
+      100,
+      -44.3
+    ],
+    [
+      110,
+      -88.6
+    ],
+    [
+      120,
+      -130.1
+    ],
+    [
+      130,
+      -167.4
+    ],
+    [
+      140,
+      -198.4
+    ],
+    [
+      150,
+      -220.6
+    ],
+    [
+      160,
+      -228.0
+    ],
+    [
+      170,
+      -188.9
+    ],
+    [
+      180,
+      0.0
+    ]
+  ],
+  "area_frontal_m2": {
+    "cabeceo_0": 0.089,
+    "cabeceo_25": 0.1841
+  },
+  "viento": {
+    "rafaga_ms": 14.0,
+    "cd_canto": 1.1,
+    "area_planta_m2": 0.1463,
+    "area_canto_m2": 0.089,
+    "inclinacion_deg": 52.4,
+    "fuerza_normal_cara_n": 19.3,
+    "arrastre_rotores_n": 15.1,
+    "empuje_necesario_n": 53.2,
+    "empuje_disponible_n": 73.4,
+    "momento_cabeceo_nm": 1.0,
+    "autoridad_cabeceo_nm": 3.43,
+    "viento_max_sostenible_ms": 12.0,
+    "nota": "placa plana con Cn y centro de presión aprox., a validar en túnel o en vuelo"
+  },
+  "empuje": {
+    "motores": 4,
+    "kg_por_motor_libre": 2.0,
+    "k_ducto": 1.1,
+    "k_rejilla": 0.85,
+    "empuje_total_n": 73.4,
+    "nota": "empuje por motor, ganancia del ducto y pérdida de rejilla: aprox., a validar en banco"
+  },
+  "relacion_empuje_peso": 3.55,
+  "rejilla": {
+    "abertura_mm": 6.0,
+    "distancia_helice_mm": 24.0,
+    "iso_13857": "ranura de 4 a 6 mm pide 10 mm de distancia (tabla 4, 14 años o más)"
+  },
+  "dimensiones_mm": {
+    "diametro_o_largo": 912,
+    "alto": 130
+  }
+}

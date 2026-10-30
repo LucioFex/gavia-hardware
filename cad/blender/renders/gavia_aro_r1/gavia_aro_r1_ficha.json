@@ -1,0 +1,311 @@
+{
+  "concepto": "gavia_aro_r1",
+  "parametros": {
+    "densidad_espuma_kg_l": 0.03,
+    "piel_kg_m2": 0.6,
+    "masa_motor_kg": 0.055,
+    "masa_helice_kg": 0.012,
+    "masa_rejilla_kg": 0.03,
+    "masa_frame_kg": 0.22,
+    "k_ducto": 1.0,
+    "k_rejilla": 0.85,
+    "abertura_rejilla": 0.005,
+    "alambre_rejilla": 0.0018,
+    "cargas_persona_n": [
+      40.0,
+      100.0
+    ],
+    "carga_render_n": 40.0,
+    "viento_rafaga_ms": 14.0,
+    "cd": 1.1,
+    "angle_max_deg": 45.0,
+    "k_giro_ducto": 0.6,
+    "cp_excentricidad": 0.12,
+    "helice_pulg": 7,
+    "kg_por_motor": 2.0,
+    "holgura_punta": 0.005,
+    "liner": 0.002,
+    "pared_ducto": 0.015,
+    "alto": 0.09,
+    "radio_medio": 0.29,
+    "radio_canto": 0.03,
+    "fleje_espesor": 0.0015,
+    "fleje_prof": 0.006,
+    "cinta_vueltas": 2,
+    "cinta_ancho": 0.03,
+    "pos_bateria": [
+      0.29,
+      0.0,
+      0.0
+    ],
+    "pos_caja": [
+      -0.29,
+      0.0,
+      0.0
+    ],
+    "punto_agarre": [
+      0.0,
+      0.29,
+      0.0
+    ],
+    "agarres_extra": {
+      "canto_exterior": [
+        0.0,
+        0.38089999999999996,
+        0.0
+      ],
+      "canto_interior": [
+        0.0,
+        0.19909999999999997,
+        0.0
+      ]
+    },
+    "brazo_cabeceo_m": 0.20506096654409878
+  },
+  "volumen_estanco_l": 24.83,
+  "masa_kg": 2.945,
+  "cg_mm": [
+    13.5,
+    -0.3,
+    0.3
+  ],
+  "cb_espuma_mm": [
+    -0.7,
+    -0.6,
+    0.3
+  ],
+  "masa_detalle": [
+    {
+      "pieza": "espuma EPP",
+      "kg": 0.703,
+      "nota": "EPP de celda cerrada, unos 30 g/L (aprox., a validar)"
+    },
+    {
+      "pieza": "piel y pintura",
+      "kg": 0.614,
+      "nota": "recubrimiento elástico sobre la espuma (aprox., a validar)"
+    },
+    {
+      "pieza": "batería LiPo 6S 3000 mAh",
+      "kg": 0.48,
+      "nota": "vuelo de pocos minutos, en el agua solo queda la baliza. LiPo de FPV para dar la corriente de pico (aprox., a validar)"
+    },
+    {
+      "pieza": "caja estanca central",
+      "kg": 0.18,
+      "nota": "PETG con tapa y o-ring (aprox., a validar)"
+    },
+    {
+      "pieza": "controladora, ESC, GPS, radios",
+      "kg": 0.1,
+      "nota": "aprox., a validar"
+    },
+    {
+      "pieza": "computadora y cámara a bordo (D-021)",
+      "kg": 0.06,
+      "nota": "aprox., a validar"
+    },
+    {
+      "pieza": "baliza, buzzer, sensor de agua, cableado",
+      "kg": 0.08,
+      "nota": "aprox., a validar"
+    },
+    {
+      "pieza": "estructura de carbono",
+      "kg": 0.22,
+      "nota": "brazos o aro de carbono embebidos (aprox., a validar)"
+    },
+    {
+      "pieza": "motor 1",
+      "kg": 0.055,
+      "nota": "motor brushless para agua de mar (aprox., a validar)"
+    },
+    {
+      "pieza": "hélice 1",
+      "kg": 0.012,
+      "nota": "aprox., a validar"
+    },
+    {
+      "pieza": "rejillas ducto 1",
+      "kg": 0.06,
+      "nota": "arriba y abajo (aprox., a validar)"
+    },
+    {
+      "pieza": "motor 2",
+      "kg": 0.055,
+      "nota": "motor brushless para agua de mar (aprox., a validar)"
+    },
+    {
+      "pieza": "hélice 2",
+      "kg": 0.012,
+      "nota": "aprox., a validar"
+    },
+    {
+      "pieza": "rejillas ducto 2",
+      "kg": 0.06,
+      "nota": "arriba y abajo (aprox., a validar)"
+    },
+    {
+      "pieza": "motor 3",
+      "kg": 0.055,
+      "nota": "motor brushless para agua de mar (aprox., a validar)"
+    },
+    {
+      "pieza": "hélice 3",
+      "kg": 0.012,
+      "nota": "aprox., a validar"
+    },
+    {
+      "pieza": "rejillas ducto 3",
+      "kg": 0.06,
+      "nota": "arriba y abajo (aprox., a validar)"
+    },
+    {
+      "pieza": "motor 4",
+      "kg": 0.055,
+      "nota": "motor brushless para agua de mar (aprox., a validar)"
+    },
+    {
+      "pieza": "hélice 4",
+      "kg": 0.012,
+      "nota": "aprox., a validar"
+    },
+    {
+      "pieza": "rejillas ducto 4",
+      "kg": 0.06,
+      "nota": "arriba y abajo (aprox., a validar)"
+    }
+  ],
+  "flotacion_total_n": 249.6,
+  "reserva_flotacion_n": 220.7,
+  "calado_mm": 9.6,
+  "francobordo_mm": 78.4,
+  "persona_agarrada": {
+    "carga_maxima_antes_de_pararse_n": 79.1,
+    "a_los_deg": 82,
+    "carga_para_escora_n": {
+      "10_deg": 63.4,
+      "20_deg": 74.9,
+      "30_deg": 76.8
+    },
+    "escora_con_40_n_deg": 5.3,
+    "escora_con_100_n_deg": 90.0,
+    "carga_maxima_agarre_canto_exterior_n": 55.6,
+    "carga_maxima_agarre_canto_interior_n": 115.9
+  },
+  "gz_mm": [
+    [
+      0,
+      -0.2
+    ],
+    [
+      10,
+      285.5
+    ],
+    [
+      20,
+      295.6
+    ],
+    [
+      30,
+      280.7
+    ],
+    [
+      40,
+      251.5
+    ],
+    [
+      50,
+      212.4
+    ],
+    [
+      60,
+      165.7
+    ],
+    [
+      70,
+      113.4
+    ],
+    [
+      80,
+      57.5
+    ],
+    [
+      90,
+      -0.1
+    ],
+    [
+      100,
+      -57.8
+    ],
+    [
+      110,
+      -113.5
+    ],
+    [
+      120,
+      -165.9
+    ],
+    [
+      130,
+      -212.5
+    ],
+    [
+      140,
+      -251.6
+    ],
+    [
+      150,
+      -280.6
+    ],
+    [
+      160,
+      -295.3
+    ],
+    [
+      170,
+      -285.2
+    ],
+    [
+      180,
+      -21.5
+    ]
+  ],
+  "area_frontal_m2": {
+    "cabeceo_0": 0.076,
+    "cabeceo_25": 0.2416
+  },
+  "viento": {
+    "rafaga_ms": 14.0,
+    "cd_canto": 1.1,
+    "area_planta_m2": 0.2896,
+    "area_canto_m2": 0.076,
+    "inclinacion_deg": 44.5,
+    "fuerza_normal_cara_n": 38.2,
+    "arrastre_rotores_n": 18.4,
+    "empuje_necesario_n": 78.8,
+    "empuje_disponible_n": 66.7,
+    "momento_cabeceo_nm": 2.79,
+    "autoridad_cabeceo_nm": 0.0,
+    "viento_max_sostenible_ms": 11.0,
+    "nota": "placa plana con Cn y centro de presión aprox., a validar en túnel o en vuelo"
+  },
+  "empuje": {
+    "motores": 4,
+    "kg_por_motor_libre": 2.0,
+    "k_ducto": 1.0,
+    "k_rejilla": 0.85,
+    "empuje_total_n": 66.7,
+    "nota": "empuje por motor, ganancia del ducto y pérdida de rejilla: aprox., a validar en banco"
+  },
+  "relacion_empuje_peso": 2.31,
+  "rejilla": {
+    "abertura_mm": 5.0,
+    "distancia_helice_mm": 38.0,
+    "iso_13857": "ranura de 4 a 6 mm pide 10 mm de distancia (tabla 4, 14 años o más)"
+  },
+  "dimensiones_mm": {
+    "diametro_o_largo": 802,
+    "alto": 90
+  }
+}

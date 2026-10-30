@@ -1,0 +1,4 @@
+# Los renders se regeneran con los scripts. En el repo quedan las fichas y los JPG de docs/renders.
+cad/blender/renders/**/*.png
+*.blend1
+__pycache__/
