@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Gavia · Roadmap del prototipo</title>
+<!--
+  Fuente del PDF. Para actualizarlo, editá este archivo y regeneralo (ver README.md).
+  Mismo estilo que materiales-y-conceptos: papel crema, tinta carbón, Work Sans, oro solo en
+  filetes y naranja solo donde es funcional (rejillas y avisos de riesgo).
+-->
+<style>
+  @font-face { font-family: "WS"; font-weight: 400; src: local("Work Sans Regular"), local("WorkSans-Regular"), url("file:///C:/Users/lucia/AppData/Local/Microsoft/Windows/Fonts/WorkSans-Regular.ttf"); }
+  @font-face { font-family: "WS"; font-weight: 600; src: local("Work Sans SemiBold"), local("WorkSans-SemiBold"), url("file:///C:/Users/lucia/AppData/Local/Microsoft/Windows/Fonts/WorkSans-SemiBold.ttf"); }
+  @font-face { font-family: "WS"; font-weight: 700; src: local("Work Sans Bold"), local("WorkSans-Bold"), url("file:///C:/Users/lucia/AppData/Local/Microsoft/Windows/Fonts/WorkSans-Bold.ttf"); }
+  @font-face { font-family: "WS"; font-weight: 800; src: local("Work Sans ExtraBold"), local("WorkSans-ExtraBold"), url("file:///C:/Users/lucia/AppData/Local/Microsoft/Windows/Fonts/WorkSans-ExtraBold.ttf"); }
+
+  :root {
+    --crema: #F8F4EB; --carbon: #1F1F1F; --sec: #5C534A; --linea: #D9CFC0;
+    --oro: #A8894A; --naranja: #F26B1D; --espuma: #EAE1CF; --aviso: #FCE9DC;
+  }
+  @page { size: A4; margin: 18mm 20mm 20mm; background: #F8F4EB;
+    @bottom-left { content: "Gavia"; font-family: "Work Sans"; font-weight: 800; font-size: 8pt; color: #1F1F1F; }
+    @bottom-right { content: "Roadmap del prototipo · " counter(page); font-family: "Work Sans"; font-size: 7.6pt; color: #5C534A; } }
+  @page tapa { @bottom-right { content: none; } }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--crema); color: var(--carbon);
+    -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: "WS", "Work Sans", sans-serif; font-size: 10pt; line-height: 1.5;
+    font-variant-numeric: lining-nums; }
+  p { margin: 0 0 2.6mm; max-width: 72ch; }
+  strong { font-weight: 700; }
+
+  .hoja { break-after: page; }
+  .hoja:last-child { break-after: auto; }
+  .tapa { page: tapa; }
+
+  /* tapa */
+  .filete { width: 22mm; height: 1.2mm; background: var(--oro); margin-top: 6mm; }
+  .tapa h1 { font-weight: 800; font-size: 40pt; line-height: 1.02; letter-spacing: -0.03em;
+    margin: 12mm 0 6mm; max-width: 14ch; text-wrap: balance; }
+  .tapa .bajada { font-size: 13pt; line-height: 1.45; color: var(--sec); max-width: 50ch; margin: 0; }
+  .tapa figure { margin: 10mm -20mm 0; }
+  .tapa figure img { width: 100%; display: block; }
+  .tapa .version { margin-top: 7mm; font-size: 8.6pt; color: var(--sec); max-width: 64ch; }
+
+  /* títulos */
+  h2 { font-weight: 800; font-size: 22pt; letter-spacing: -0.025em; line-height: 1.08;
+    margin: 0 0 3mm; break-after: avoid; text-wrap: balance; }
+  h3 { font-weight: 700; font-size: 12.5pt; letter-spacing: -0.01em; line-height: 1.2;
+    margin: 8mm 0 2.5mm; break-after: avoid; }
+  .intro { color: var(--sec); font-size: 11pt; max-width: 62ch; margin: 0 0 6mm; }
+  .nueva { break-before: page; }
+  .evitar { break-inside: avoid; }
+
+  /* imágenes */
+  figure { margin: 0; }
+  .grande img { width: 100%; display: block; border-radius: 3mm; }
+  figcaption, .ilustrativa { font-size: 7.8pt; color: var(--sec); margin-top: 1.6mm; }
+  .par { display: grid; grid-template-columns: 1fr 72mm; gap: 7mm; align-items: start; margin: 5mm 0; break-inside: avoid; }
+  .par.izq { grid-template-columns: 72mm 1fr; }
+  .par img { width: 100%; display: block; border-radius: 2.5mm; }
+  .par p:last-child, .par ol:last-child { margin-bottom: 0; }
+
+  /* tablas */
+  table { width: 100%; border-collapse: collapse; font-size: 8.9pt; margin: 2mm 0 3mm; }
+  th { text-align: left; font-weight: 700; padding: 1.6mm 2mm 1.6mm 0; border-bottom: 0.4mm solid var(--carbon); }
+  td { padding: 1.7mm 2mm 1.7mm 0; border-bottom: 0.25mm solid var(--linea); vertical-align: top; }
+  tr { break-inside: avoid; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; padding-right: 0; }
+  td.o, th.o { color: var(--sec); white-space: nowrap; padding-left: 5mm; padding-right: 0; }
+  th.o { color: var(--carbon); }
+  td.l { width: 6mm; font-weight: 700; }
+  td code, p code, li code { font-family: inherit; font-weight: 600; }
+  tr.total td { border-bottom: none; font-weight: 700; padding-top: 2.4mm; }
+  .camino th { border-bottom: 0.4mm solid var(--carbon); font-size: 10pt; }
+  .camino td:first-child { color: var(--sec); width: 27mm; }
+  .camino td { font-size: 9pt; }
+
+  /* pasos */
+  ol.pasos { margin: 0 0 3mm; padding: 0; list-style: none; counter-reset: paso; }
+  ol.pasos > li { counter-increment: paso; position: relative; padding: 0 0 2.2mm 8mm; max-width: 72ch; break-inside: avoid; }
+  ol.pasos > li::before { content: counter(paso); position: absolute; left: 0; top: 0;
+    width: 5.5mm; font-weight: 800; font-size: 10pt; line-height: 1.5; color: var(--carbon);
+    font-variant-numeric: tabular-nums; }
+  ul.lista { margin: 0 0 3mm; padding: 0; list-style: none; }
+  ul.lista li { position: relative; padding-left: 5mm; margin-bottom: 1.4mm; max-width: 70ch; }
+  ul.lista li::before { content: ""; position: absolute; left: 0; top: 2.5mm; width: 2.4mm; height: 0.5mm;
+    background: var(--carbon); }
+  .grande.corta img { height: 80mm; object-fit: cover; object-position: 50% 45%; }
+
+  /* recuadros */
+  .mensaje { background: var(--espuma); border-radius: 2.5mm; padding: 4mm 5mm; margin: 2mm 0 4mm;
+    font-size: 9.4pt; break-inside: avoid; max-width: 160mm; }
+  .mensaje p { margin: 0 0 1.6mm; }
+  .mensaje p:last-child { margin: 0; }
+  .cuidado { background: var(--aviso); border: 0.3mm solid var(--naranja); border-radius: 2.5mm;
+    padding: 3.5mm 5mm; margin: 3mm 0 4mm; font-size: 9.2pt; break-inside: avoid; }
+  .cuidado p { margin: 0 0 1.2mm; } .cuidado p:last-child { margin: 0; }
+  .regla { border-top: 0.4mm solid var(--carbon); border-bottom: 0.4mm solid var(--carbon);
+    padding: 3.5mm 0; margin: 5mm 0 0; break-inside: avoid; }
+  .regla p { margin: 0; font-size: 10.4pt; }
+  .nota { font-size: 8.4pt; color: var(--sec); }
+
+  /* diagramas */
+  .diagrama { margin: 3mm 0 2mm; break-inside: avoid; }
+  .diagrama img, .diagrama svg { width: 100%; height: auto; display: block; }
+</style>
+</head>
+<body>
+
+<!-- TAPA -->
+<div class="hoja tapa">
+  <div class="filete"></div>
+  <h1>Roadmap del prototipo de Gavia</h1>
+  <p class="bajada">Qué conseguir, dónde pedirlo y cómo armarlo, fase por fase. Pensado para que
+    lo podamos hacer entre los tres sin saber de antemano de drones ni de electrónica.</p>
+  <figure><img src="img/01-banco.jpg" alt="Los tres armando el banco de pruebas en un garage"></figure>
+  <p class="version">Versión del 30/10/2026. Precios de MercadoLibre del 30/10/26, sin impuestos y
+    con el dólar MEP a $1.568. Cambian rápido: revisarlos antes de comprar. Las ilustraciones son
+    imágenes de referencia, no fotos de pruebas. Los números del dron son aproximados hasta
+    medirlos.</p>
+</div>
+
+<!-- EL CAMINO -->
+<div class="hoja">
+  <h2>El camino en una página</h2>
+  <p class="intro">Medimos antes de construir. Cada fase confirma un número del diseño antes de
+    gastar en la siguiente, así nunca tiramos un aro entero porque el motor no empujaba lo que
+    creíamos. El software (simulador, detección con el iPhone y botonera) va en paralelo.</p>
+
+  <table class="camino">
+    <tr><th></th><th>Fase 1 · Banco</th><th>Fase 2 · Cuerpo</th><th>Fase 3 · Vuelo atado</th></tr>
+    <tr><td>Qué decide</td><td>Si el motor empuja lo que dice el fabricante, cuánto suma el ducto y cuánto quitan las rejillas. Si el sensor distingue agua de mar de lluvia</td><td>Si el aro sostiene a un adulto agarrado de un costado sin darse vuelta, y si las cajas no entran agua</td><td>Si vuela estable atado, si el corte por agua apaga los motores y si se destraba con el imán</td></tr>
+    <tr><td>Qué armamos</td><td>Un solo motor dentro de un ducto, sobre una balanza, en la mesa del garage</td><td>El cuerpo del aro en telgopor, con su forma final, probado en pileta con pesas</td><td>El dron completo: motores, cajas, electrónica, rejillas, piel y botonera</td></tr>
+    <tr><td>Cuánto cuesta</td><td>Unos $1.164.000 (USD 742)</td><td>Unos $103.000 (USD 66), más el corte</td><td>Unos $1.079.000 (USD 688), aprox.</td></tr>
+    <tr><td>Cuánto tarda</td><td>2 semanas de envíos y 2 fines de semana (aprox.)</td><td>1 semana de taller y 1 fin de semana (aprox.)</td><td>1 a 2 meses (aprox.)</td></tr>
+    <tr><td>Pasamos si</td><td>Cada motor con ducto y rejillas empuja 1,7 kg o más</td><td>Un adulto se agarra del canto de adentro y el aro no se para de canto</td><td>Vuela atado 3 minutos sin sustos y el corte por agua funciona</td></tr>
+  </table>
+  <p class="nota">Todo junto da unos USD 1.496 sin impuestos ni lo que falta cotizar (los cortes,
+    la celda de 10 kg, la piel y la botonera). El plan anterior daba unos USD 2.012. La IA a bordo
+    (unos USD 370) queda para después del primer vuelo.</p>
+
+  <h3>Qué simplificamos y por qué</h3>
+  <ul class="lista">
+    <li>Herramientas, banco y sensor de agua van en una sola compra y en la misma mesa.</li>
+    <li>Cargador que se enchufa directo a 220 V. Nadie cablea una fuente a la red.</li>
+    <li>El banco sale entero del corte láser, como un mueble para armar. Sin sierra ni taladro.</li>
+    <li>Una sola hélice para todo el proyecto (la que medimos) y una sola ficha de batería.</li>
+    <li>Nada impreso en 3D: los ductos salen de la misma plancha de policarbonato, las rejillas del
+      mismo archivo de láser y las cajas son estancas de electricidad.</li>
+    <li>La maqueta de pileta es el cuerpo del dron. Se corta una sola vez.</li>
+    <li>El banco mide 3 configuraciones en vez de 5. El labio redondeado va de entrada.</li>
+  </ul>
+</div>
+
+<!-- ANTES DE COMPRAR -->
+<div class="hoja">
+  <h2>Antes de comprar</h2>
+  <p class="intro">Tres cosas que nos ahorran plata y problemas.</p>
+
+  <h3>Cómo pedir en MercadoLibre</h3>
+  <ol class="pasos">
+    <li>En cada tabla, la columna "Qué poner en el buscador" es lo que se escribe tal cual. Si
+      aparecen muchas opciones, elegir la de más ventas y mejor calificación.</li>
+    <li>Mirar si dice <strong>Envío desde China</strong> o <strong>Compra internacional</strong>.
+      Esas tardan una o dos semanas y pagan impuestos aparte.</li>
+    <li>Antes de comprar la batería y los motores, mandar una pregunta al vendedor (abajo están los
+      textos).</li>
+    <li>Guardar el comprobante y avisar en el grupo qué se compró, así nadie compra lo mismo dos
+      veces.</li>
+  </ol>
+
+  <h3>Repartir lo importado entre los tres</h3>
+  <p>Las publicaciones de China avisan un límite de 5 envíos internacionales por año por persona.
+    Si cada uno compra con su cuenta, usa su propio cupo. El paquete llega a nombre y a la dirección
+    de quien compra. Cómo cuenta MercadoLibre el límite (por compra o por paquete) está a validar.
+    Sugerencia de reparto:</p>
+  <table>
+    <tr><th>Compra importada</th><th>Fase</th><th>Quién</th></tr>
+    <tr><td>Motores Hobbywing, pack de 4</td><td>1</td><td>Lucho</td></tr>
+    <tr><td>ESC del banco</td><td>1</td><td>Eli</td></tr>
+    <tr><td>Controladora y ESC del dron</td><td>3</td><td>Augus</td></tr>
+    <tr><td>GPS</td><td>3</td><td>Lucho</td></tr>
+    <tr><td>Radio y receptor</td><td>3</td><td>Eli</td></tr>
+  </table>
+  <p class="nota">Después vemos entre los tres cómo se financia cada compra. El reparto es solo
+    para no gastar el cupo de uno.</p>
+
+  <h3>Preguntas para el vendedor</h3>
+  <div class="mensaje">
+    <p>Para los motores: "Hola, ¿son Hobbywing XRotor 2812 900KV originales? ¿El pack trae 4
+      motores con sus tornillos? Gracias."</p>
+    <p>Para la batería: "Hola, ¿cuánto pesa la batería y qué ficha trae (XT60 o XT90)? Gracias."</p>
+  </div>
+
+  <div class="cuidado">
+    <p><strong>La batería y la hélice son lo único peligroso de todo esto.</strong></p>
+    <p>La batería LiPo se carga adentro de la bolsa ignífuga, sobre una superficie que no se queme,
+      con alguien mirando. Nunca de noche sola, nunca si está hinchada o golpeada.</p>
+    <p>Una hélice de 8 pulgadas a fondo corta. Nadie se pone en el plano de la hélice, siempre con
+      anteojos, y la batería se conecta último y se desconecta primero.</p>
+  </div>
+</div>
+
+<!-- FASE 1 -->
+<div class="hoja">
+  <h2>Fase 1 · El banco</h2>
+  <p class="intro">Un solo motor con su hélice, adentro de un ducto igual a los del aro, apoyado
+    sobre una balanza electrónica. Medimos cuánto empuja y cuánto consume. En la misma mesa probamos
+    el sensor que corta los motores en el agua.</p>
+
+  <h3>Qué conseguir</h3>
+  <table>
+    <tr><th>Qué</th><th>Qué poner en el buscador</th><th class="n">Precio</th><th class="o">Origen</th></tr>
+    <tr><td>Soldador</td><td>estación soldador T12 G Tools 72W</td><td class="n">$95.101</td><td class="o">Local</td></tr>
+    <tr><td>Estaño</td><td>estaño 63/37 0.8 mm con flux</td><td class="n">$10.500</td><td class="o">Local</td></tr>
+    <tr><td>Multímetro</td><td>multímetro Uni-T UT89XD</td><td class="n">$37.900</td><td class="o">Local</td></tr>
+    <tr><td>Cable grueso</td><td>cable silicona 12 AWG rojo negro</td><td class="n">$29.900</td><td class="o">Local</td></tr>
+    <tr><td>Termocontraíble</td><td>kit termocontraíble 560 piezas</td><td class="n">$15.200</td><td class="o">Local</td></tr>
+    <tr><td>Anteojos, x3</td><td>anteojos de seguridad Libus</td><td class="n">$10.340</td><td class="o">Local</td></tr>
+    <tr><td>Motores, pack de 4</td><td>Hobbywing XRotor 2812 900KV 4 unidades</td><td class="n">$127.997</td><td class="o">China</td></tr>
+    <tr><td>Hélices, un par</td><td>Gemfan 8046 tripala</td><td class="n">$49.501</td><td class="o">Local</td></tr>
+    <tr><td>ESC</td><td>ESC EMAX BLHeli 60A 2-6S</td><td class="n">$53.168</td><td class="o">China</td></tr>
+    <tr><td>Batería</td><td>LiPo Pulse 6S 5200 mAh 80C</td><td class="n">$270.000</td><td class="o">Local</td></tr>
+    <tr><td>Cargador con fuente</td><td>cargador Imax B6AC con fuente</td><td class="n">$219.990</td><td class="o">Local</td></tr>
+    <tr><td>Wattímetro</td><td>wattímetro 150A</td><td class="n">$79.000</td><td class="o">Local</td></tr>
+    <tr><td>Fichas, 2 pares</td><td>fichas XT90 macho hembra (o XT60 si la batería trae XT60)</td><td class="n">$22.063</td><td class="o">Local</td></tr>
+    <tr><td>Celda de carga</td><td>celda de carga 10 kg HX711</td><td class="n">a cotizar</td><td class="o">Local</td></tr>
+    <tr><td>Placa ESP32</td><td>ESP32 USB-C NodeMCU</td><td class="n">$15.990</td><td class="o">Local</td></tr>
+    <tr><td>Bolsa ignífuga</td><td>bolsa ignífuga lipo 29x23</td><td class="n">$37.991</td><td class="o">Local</td></tr>
+    <tr><td>Policarbonato</td><td>policarbonato compacto 1 mm 1,2 x 1,2</td><td class="n">$47.033</td><td class="o">Local</td></tr>
+    <tr><td>Sargentos, x2</td><td>sargento Wadfow 300 mm</td><td class="n">$22.800</td><td class="o">Local</td></tr>
+    <tr><td>Sensor de agua</td><td>módulo LM393 sensor de lluvia con sonda</td><td class="n">$5.604</td><td class="o">Local</td></tr>
+    <tr><td>Electrodos</td><td>varilla roscada inoxidable 316 1/4</td><td class="n">$13.750</td><td class="o">Local</td></tr>
+    <tr class="total"><td>Total</td><td>Sin la celda, el corte láser ni la manguera</td><td class="n">$1.163.828</td><td></td></tr>
+  </table>
+  <p class="nota">La plancha de policarbonato alcanza para el ducto del banco y para los cuatro
+    ductos del dron. La celda pasa de 5 a 10 kg porque con el banco encima la de 5 kg queda justa
+    (aprox., a validar). La manguera para el labio (unos 20 mm de diámetro, 70 cm) se consigue en
+    cualquier ferretería.</p>
+</div>
+
+<div class="hoja">
+  <h3 style="margin-top:0">Qué mandar al taller de corte láser</h3>
+  <p>Todo el banco sale de un solo pedido: dos planchas de MDF y los dos discos de rejilla en
+    acrílico, con el material del taller. Los archivos están en
+    <code>gavia-hardware/cad/banco/</code>. Un taller posible es
+    <a href="https://servicio.mercadolibre.com.ar/MLA-3214912144-servicio-corte-laser-co2-mdf-acrilico-madera-goma-grabados-_JM">este de Almirante Brown</a>.
+    Mandar <code>banco_mdf_1.dxf</code>, <code>banco_mdf_2.dxf</code> y <code>rejilla_banco.dxf</code> con
+    este mensaje:</p>
+  <div class="mensaje">
+    <p>Hola, necesito un corte láser con material incluido. Son dos planchas de 600 x 400 mm en MDF
+      (fibrofácil) de 5,5 mm, con los archivos banco_mdf_1 y banco_mdf_2, y dos discos en acrílico
+      de 6 mm con el archivo rejilla_banco (la misma pieza dos veces). Las medidas están en
+      milímetros. El rojo es corte y el azul es grabado, si no pueden grabar ignoren el azul.
+      ¿Cuánto sale y para cuándo estaría?</p>
+  </div>
+  <p class="nota">Antes de mandarlo, con la celda y el motor en la mano, chequear que los agujeros
+    coincidan con el dibujo. Si no coinciden, se cambia un número en <code>banco_laser.py</code> y
+    se vuelve a generar el archivo.</p>
+
+  <h3>Cómo queda armado</h3>
+  <div class="diagrama"><img src="../../cad/banco/banco_armado.svg" alt="Esquema del banco armado, de frente"></div>
+  <p class="nota">Todo lo que está arriba de la celda se pesa, ducto y rejillas incluidos. Por eso
+    el ducto va montado sobre la plataforma y no sobre la mesa.</p>
+</div>
+
+<div class="hoja">
+  <h3 style="margin-top:0">Armado, paso a paso</h3>
+
+  <div class="par">
+    <div>
+      <ol class="pasos">
+        <li>Con el multímetro y el soldador, armar los cables: fichas en el wattímetro, en el ESC y
+          en el cable de la batería. Primero se estaña cada punta, después se juntan y se cubren
+          con termocontraíble.</li>
+        <li>Pegar las patas a la base con cola vinílica y atornillar la celda a la base por la punta
+          fija, con dos separadores en el medio. La flecha de la celda mira hacia abajo.</li>
+        <li>Atornillar la plataforma a la otra punta de la celda, con los otros dos separadores. La
+          plataforma no puede tocar la celda en ningún otro lado.</li>
+      </ol>
+    </div>
+    <figure><img src="img/03-soldar.jpg" alt="Soldando una ficha de batería"><figcaption>Imagen ilustrativa.</figcaption></figure>
+  </div>
+
+  <div class="par izq">
+    <figure><img src="img/04-kit.jpg" alt="Armando el kit de MDF"><figcaption>Imagen ilustrativa.</figcaption></figure>
+    <div>
+      <ol class="pasos" style="counter-reset: paso 3">
+        <li>Encastrar los dos parantes y los dos refuerzos en la plataforma y pegarlos.</li>
+        <li>Pasar los listones por las ventanas de los parantes y la placa del motor por las
+          ventanas de los listones. Pegar.</li>
+        <li>Atornillar el motor a la placa desde abajo con cuatro tornillos M3 de 8 mm. Nunca más
+          largos, porque tocan el bobinado.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="par">
+    <div>
+      <ol class="pasos" style="counter-reset: paso 6">
+        <li>Cortar en la plancha de policarbonato una tira de 90 x 693 mm y, antes de enrollarla,
+          las cuatro ranuras para los listones (medidas en el README del banco).</li>
+        <li>Enrollar la tira hasta 213 mm de diámetro por dentro, con 20 mm de solape, y pegar el
+          solape. Pegar los dos anillos de MDF a 40 y 70 mm del borde que tiene las ranuras.</li>
+        <li>Bajar el tubo desde arriba: las ranuras pasan por los listones y los anillos apoyan en
+          los parantes.</li>
+      </ol>
+    </div>
+    <figure><img src="img/02-ducto.jpg" alt="Enrollando la tira de policarbonato"><figcaption>Imagen ilustrativa.</figcaption></figure>
+  </div>
+
+  <ol class="pasos" style="counter-reset: paso 9">
+    <li>Calzar las dos rejillas adentro del tubo, una abajo y otra arriba, cada una con tres puntos
+      de cinta. Calzar la manguera cortada a lo largo en el borde de abajo: ese es el labio.</li>
+    <li>Poner la hélice y fijar la base a la mesa con los dos sargentos. Mesa pesada, lejos de la
+      pared.</li>
+  </ol>
+</div>
+
+<div class="hoja">
+  <h3 style="margin-top:0">Cómo se conecta</h3>
+  <p>Dos circuitos separados. El de potencia lleva mucha corriente y usa cable grueso. El de datos
+    es el de la plaquita y va con cables finitos.</p>
+  <div class="diagrama">
+    <svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" font-family="WS, Work Sans, sans-serif">
+      <!-- potencia -->
+      <g font-size="10.5" fill="#1F1F1F">
+        <rect x="10" y="30" width="110" height="56" rx="6" fill="#FCE9DC" stroke="#F26B1D" stroke-width="1"/>
+        <text x="65" y="54" text-anchor="middle" font-weight="700">Batería 6S</text>
+        <text x="65" y="70" text-anchor="middle" font-size="9" fill="#5C534A">en la bolsa</text>
+        <rect x="170" y="30" width="110" height="56" rx="6" fill="#EAE1CF" stroke="#1F1F1F" stroke-width="0.8"/>
+        <text x="225" y="54" text-anchor="middle" font-weight="700">Wattímetro</text>
+        <text x="225" y="70" text-anchor="middle" font-size="9" fill="#5C534A">volts y amperes</text>
+        <rect x="330" y="30" width="110" height="56" rx="6" fill="#EAE1CF" stroke="#1F1F1F" stroke-width="0.8"/>
+        <text x="385" y="54" text-anchor="middle" font-weight="700">ESC</text>
+        <text x="385" y="70" text-anchor="middle" font-size="9" fill="#5C534A">sobre la plataforma</text>
+        <rect x="490" y="30" width="110" height="56" rx="6" fill="#EAE1CF" stroke="#1F1F1F" stroke-width="0.8"/>
+        <text x="545" y="54" text-anchor="middle" font-weight="700">Motor</text>
+        <text x="545" y="70" text-anchor="middle" font-size="9" fill="#5C534A">en el ducto</text>
+      </g>
+      <g stroke="#1F1F1F" stroke-width="4" stroke-linecap="round">
+        <line x1="120" y1="58" x2="170" y2="58"/><line x1="280" y1="58" x2="330" y2="58"/>
+      </g>
+      <g stroke="#1F1F1F" stroke-width="2.2" stroke-linecap="round">
+        <line x1="440" y1="49" x2="490" y2="49"/><line x1="440" y1="58" x2="490" y2="58"/><line x1="440" y1="67" x2="490" y2="67"/>
+      </g>
+      <g font-size="8.6" fill="#5C534A" text-anchor="middle">
+        <text x="145" y="22">XT90 o XT60</text><text x="305" y="22">XT90 o XT60</text><text x="465" y="22">3 cables</text>
+      </g>
+      <!-- datos -->
+      <g font-size="10.5" fill="#1F1F1F">
+        <rect x="290" y="170" width="150" height="60" rx="6" fill="#F8F4EB" stroke="#1F1F1F" stroke-width="0.8"/>
+        <text x="365" y="196" text-anchor="middle" font-weight="700">ESP32</text>
+        <text x="365" y="212" text-anchor="middle" font-size="9" fill="#5C534A">el programa del banco</text>
+        <rect x="520" y="170" width="140" height="60" rx="6" fill="#F8F4EB" stroke="#1F1F1F" stroke-width="0.8"/>
+        <text x="590" y="196" text-anchor="middle" font-weight="700">Laptop</text>
+        <text x="590" y="212" text-anchor="middle" font-size="9" fill="#5C534A">guarda el CSV</text>
+        <rect x="10" y="104" width="110" height="30" rx="6" fill="#F8F4EB" stroke="#1F1F1F" stroke-width="0.8"/>
+        <text x="65" y="123" text-anchor="middle" font-weight="700">Celda de carga</text>
+        <rect x="70" y="150" width="140" height="44" rx="6" fill="#F8F4EB" stroke="#1F1F1F" stroke-width="0.8"/>
+        <text x="140" y="170" text-anchor="middle" font-weight="700">HX711</text>
+        <text x="140" y="184" text-anchor="middle" font-size="9" fill="#5C534A">lee la celda</text>
+        <rect x="70" y="236" width="140" height="44" rx="6" fill="#F8F4EB" stroke="#1F1F1F" stroke-width="0.8"/>
+        <text x="140" y="256" text-anchor="middle" font-weight="700">Sensor de agua</text>
+        <text x="140" y="270" text-anchor="middle" font-size="9" fill="#5C534A">con los electrodos</text>
+      </g>
+      <g stroke="#5C534A" stroke-width="1.2" fill="none">
+        <path d="M385 86 V170"/>
+        <path d="M210 172 H290"/>
+        <path d="M210 258 H250 V215 H290"/>
+        <path d="M440 200 H520"/>
+        <path d="M40 134 V172 H70"/>
+      </g>
+      <g font-size="8.6" fill="#5C534A">
+        <text x="392" y="122">señal y masa</text><text x="392" y="134">(el rojo del ESC no)</text>
+        <text x="216" y="166">4 cables</text>
+        <text x="216" y="252">3 cables</text>
+        <text x="452" y="194">USB-C</text>
+
+      </g>
+    </svg>
+  </div>
+  <ul class="lista">
+    <li>Del ESC al ESP32 van solo el cable de señal y la masa. Si el ESC trae un cable rojo de 5 V,
+      no se conecta: el ESP32 ya toma corriente del USB.</li>
+    <li>La celda trae cuatro cables (casi siempre rojo, negro, verde y blanco) que van a E+, E−, A+
+      y A− del HX711. Los colores pueden variar, mirar la etiqueta de la celda.</li>
+    <li>El programa del ESP32 que hace el barrido y corta solo a los 10 s va en
+      <code>gavia-firmware</code>. Está pendiente y lo armamos antes de la primera medición.</li>
+  </ul>
+
+  <h3>Cómo se mide</h3>
+  <p>Tres configuraciones con el mismo motor y la misma hélice. En cada una, el ESP32 sube el
+    acelerador de a pasos del 30 al 100 % y anota empuje, volts y amperes en un archivo.</p>
+  <table>
+    <tr><th></th><th>Configuración</th><th>Qué nos dice</th></tr>
+    <tr><td class="l">a</td><td>Hélice libre, sin el tubo</td><td>Si el motor empuja lo que dice Hobbywing (2.771 g al 100 % según su <a href="https://www.hobbywing.com/en/uploads/file/20250207/0476a125d1bfffb4de7049354738a459.pdf">tabla</a>). Si da mucho menos, el motor no es original</td></tr>
+    <tr><td class="l">b</td><td>Con el tubo y el labio</td><td>Cuánto suma el ducto</td></tr>
+    <tr><td class="l">c</td><td>Tubo, labio y las dos rejillas</td><td>Cuánto quitan las rejillas. Es el número que importa</td></tr>
+  </table>
+</div>
+
+<div class="hoja">
+  <div class="par">
+    <div>
+      <h3 style="margin-top:0">El sensor de agua, en la mesa de la cocina</h3>
+      <ol class="pasos">
+        <li>Cortar dos pedazos de 5 cm de la varilla inoxidable y atarlos paralelos a 1 cm, sin que
+          se toquen. Esos son los electrodos.</li>
+        <li>Llenar cuatro vasos: agua de lluvia o destilada, agua de la canilla, agua de pileta y
+          agua con 35 g de sal por litro (unas dos cucharadas soperas, aprox.), que imita al mar.</li>
+        <li>Meter los electrodos en cada vaso y anotar lo que lee el ESP32. Enjuagar entre vaso y
+          vaso.</li>
+      </ol>
+    </div>
+    <figure><img src="img/05-agua.jpg" alt="Probando el sensor en vasos de agua"><figcaption>Imagen ilustrativa.</figcaption></figure>
+  </div>
+  <p>Buscamos un número fijo que separe el agua de mar de la lluvia. El vaso de pileta importa
+    porque las primeras demos van a ser ahí: si con agua de pileta no dispara, lo anotamos para la
+    fase 3. El circuito que traba los motores hasta pasar el imán se arma recién en la fase 3, con
+    el umbral ya medido.</p>
+
+  <div class="regla">
+    <p><strong>Pasamos a la fase 2 si</strong> cada motor, con ducto, labio y rejillas, empuja 1,7 kg
+      o más al 100 %. Es el doble del peso del dron repartido en cuatro (3,4 kg, aprox.). Si la
+      batería pesa más que los 480 g del modelo, se suma la diferencia. Si no llega, antes de
+      comprar nada más probamos con un motor más grande o le sacamos peso al diseño.</p>
+  </div>
+</div>
+
+<!-- FASE 2 -->
+<div class="hoja">
+  <h2>Fase 2 · El cuerpo</h2>
+  <p class="intro">El aro de 80 cm en telgopor, cortado por un taller en tres capas de 3 cm que
+    pegamos nosotros. Primero lo probamos en una pileta con pesas en lugar de la electrónica. Si
+    pasa, ese mismo cuerpo es el del dron.</p>
+
+  <figure class="grande corta"><img src="img/06-taller.jpg" alt="Los tres retirando el aro de telgopor del taller"><figcaption>Imagen ilustrativa.</figcaption></figure>
+
+  <h3>Qué conseguir</h3>
+  <table>
+    <tr><th>Qué</th><th>Qué poner en el buscador</th><th class="n">Precio</th></tr>
+    <tr><td>Corte de las 3 capas, con material</td><td>Taller de telgopor o router CNC (ver abajo)</td><td class="n">a cotizar</td></tr>
+    <tr><td>Pegamento, x2</td><td>Novolastic adhesivo para telgopor</td><td class="n">$21.091</td></tr>
+    <tr><td>Dinamómetro</td><td>balanza colgante digital 50 kg</td><td class="n">$20.500</td></tr>
+    <tr><td>Pesas, x3</td><td>lastre buceo forrado 1 kg</td><td class="n">$45.717 (aprox.)</td></tr>
+    <tr><td>Cajas estancas, x2</td><td>caja de paso estanca 120x170x75 IP65 Kalop</td><td class="n">$16.022</td></tr>
+    <tr><td>Entrada a la pileta</td><td>Pileta techada (las descubiertas abren en diciembre)</td><td class="n">a cotizar</td></tr>
+    <tr class="total"><td>Total</td><td>Sin el corte ni la pileta</td><td class="n">$103.330</td></tr>
+  </table>
+  <p class="nota">Las pesas: la publicación cotizada da $30.478 por dos. El cuerpo pesa unos 0,65 kg y
+    el dron unos 3,4 kg, así que faltan unos 2,75 kg de lastre más la diferencia de la batería
+    (aprox., a validar). Los cuatro tubos de los ductos salen de la plancha de policarbonato de la
+    fase 1.</p>
+</div>
+
+<div class="hoja">
+  <h3 style="margin-top:0">Qué mandar al taller de telgopor</h3>
+  <p>Sirve un taller de corte con hilo caliente o uno de router CNC. Opciones para consultar:
+    <a href="https://www.instagram.com/telgoporquilmes/">Telgopor Quilmes</a>,
+    <a href="https://deletrearte.com.ar/Servicios/">Deletrearte</a> y
+    <a href="https://rotularte.com.ar/producto/corte-cnc-por-hora-servicio-para-grafica-y-carteleria/">RotulArte</a>
+    (CABA, CNC desde $61.440 la hora). Los archivos están en <code>gavia-hardware/cad/cuerpo/</code>:
+    mandar <code>capa_exterior.dxf</code>, <code>capa_media.dxf</code> y <code>tapon_caja.dxf</code>.</p>
+  <div class="mensaje">
+    <p>Hola, necesito cortar tres capas de un aro en telgopor (EPS) de 30 mm y 30 kg/m3, con
+      material incluido si tienen. Son dos veces el archivo capa_exterior y una vez capa_media, más
+      dos tapones chicos con el archivo tapon_caja. El aro mide 80 cm de diámetro, las medidas están
+      en milímetros. Los agujeros de adentro los pueden encarar por donde les quede mejor. ¿Cuánto
+      sale y para cuándo estaría?</p>
+  </div>
+
+  <div class="diagrama" style="max-width:150mm; margin-left:auto; margin-right:auto"><img src="../../cad/cuerpo/cuerpo_armado.svg" alt="Las tres capas del cuerpo en explosión"></div>
+</div>
+
+<div class="hoja">
+  <h3 style="margin-top:0">Armado del cuerpo</h3>
+  <div class="par">
+    <div>
+      <ol class="pasos">
+        <li>Cortar cuatro tiras de policarbonato de 90 x 693 mm y enrollarlas como el ducto del
+          banco, sin las ranuras.</li>
+        <li>Presentar las tres capas en seco, con la del medio entre las otras dos, y pasar los
+          cuatro tubos por los agujeros: alinean las capas solos.</li>
+        <li>Pegar de a una capa con el adhesivo para telgopor, con los tubos puestos, y dejar secar
+          con peso encima (libros, bidones).</li>
+        <li>Pegar los dos tapones en el fondo de las ventanas de las cajas.</li>
+        <li>Lijar el canto de afuera y el de adentro hasta redondearlos, y suavizar la boca de los
+          huecos de mano y de los ductos.</li>
+      </ol>
+    </div>
+    <figure><img src="img/07-capas.jpg" alt="Pegando las tres capas del aro"><figcaption>Imagen ilustrativa.</figcaption></figure>
+  </div>
+
+  <h3>En la pileta</h3>
+  <div class="par izq">
+    <figure><img src="img/08-pileta.jpg" alt="Probando el aro en la pileta"><figcaption>Imagen ilustrativa.</figcaption></figure>
+    <div>
+      <ol class="pasos">
+        <li>Encintar las pesas donde van la batería y los motores, hasta llegar al peso del dron.</li>
+        <li>Medir cuánto se hunde flotando solo.</li>
+        <li>Enganchar la balanza colgante a una cinta en el canto de adentro y tirar hacia abajo
+          hasta los 4 kg (40 N). Anotar cuánto se inclina.</li>
+        <li>Seguir tirando hasta que se pare de canto y anotar el número. Repetir en la mitad del
+          aro y en el canto de afuera.</li>
+        <li>Que uno se meta al agua y se agarre del canto de adentro, como se agarraría alguien que
+          se está ahogando.</li>
+        <li>Hundir las dos cajas cerradas, con papel adentro, a 1 m durante 30 minutos. Si el papel
+          sale seco, son estancas.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="regla">
+    <p><strong>Pasamos a la fase 3 si</strong> el aro sostiene a un adulto agarrado del canto de
+      adentro sin pararse de canto (el modelo dice que aguanta unos 125 N, aprox., a validar) y las
+      cajas salen secas.</p>
+  </div>
+</div>
+
+<!-- FASE 3 -->
+<div class="hoja">
+  <h2>Fase 3 · Vuelo atado</h2>
+  <p class="intro">Armamos el dron completo sobre el cuerpo de la fase 2 y lo hacemos volar atado a
+    una estaca, en un campo abierto. Esta fase se confirma con los números del banco, así que la
+    lista es una guía y no un pedido cerrado.</p>
+
+  <figure class="grande corta"><img src="img/09-electronica.jpg" alt="Los tres instalando la electrónica en el aro"><figcaption>Imagen ilustrativa.</figcaption></figure>
+
+  <h3>Qué conseguir</h3>
+  <table>
+    <tr><th>Qué</th><th>Qué poner en el buscador</th><th class="n">Precio</th><th class="o">Origen</th></tr>
+    <tr><td>Controladora y ESC</td><td>Se elige al terminar el banco: un stack con ESC 4 en 1 de 6S y 55 A o más por canal, con soporte oficial de ArduPilot. Plan B: Matek H743-WING V3, 3 ESC EMAX 60A y placa Matek FCHUB-12S</td><td class="n">$501.106 (plan B)</td><td class="o">China</td></tr>
+    <tr><td>GPS</td><td>GPS MicoAir M10G-5883</td><td class="n">$69.906</td><td class="o">China</td></tr>
+    <tr><td>Radio</td><td>Radiomaster Pocket ELRS</td><td class="n">$201.977</td><td class="o">Internac.</td></tr>
+    <tr><td>Receptor</td><td>Radiomaster RP3 ELRS 2.4</td><td class="n">$86.355</td><td class="o">Internac.</td></tr>
+    <tr><td>Tubo de carbono</td><td>tubo carbono 13x10x1000</td><td class="n">$96.000</td><td class="o">Local</td></tr>
+    <tr><td>Hélices, 2 pares más</td><td>Gemfan 8046 tripala</td><td class="n">$99.002</td><td class="o">Local</td></tr>
+    <tr><td>Buzzer</td><td>buzzer activo 5V</td><td class="n">$6.519</td><td class="o">Local</td></tr>
+    <tr><td>Bloqueo por agua</td><td>relé biestable 5V, reed switch NA, imán neodimio 10x3</td><td class="n">$18.175</td><td class="o">Local</td></tr>
+    <tr><td>Rejillas del dron, x8</td><td>Mismo archivo de láser que el banco, en acrílico de 6 mm</td><td class="n">a cotizar</td><td class="o">Taller</td></tr>
+    <tr><td>Piel</td><td>Taller de tablas de surf (laminado epoxi sobre EPS) o membrana acrílica a pincel</td><td class="n">a cotizar</td><td class="o">Taller</td></tr>
+    <tr class="total"><td>Total</td><td>Con el plan B, sin rejillas, piel ni botonera</td><td class="n">$1.079.040</td><td></td></tr>
+  </table>
+  <p class="nota">Nunca resina poliéster sobre el telgopor: lo derrite. Los liners salen de la plancha
+    de policarbonato de la fase 1. Plan B de controladora más barato: MicoAir743 a $127.216, también
+    con soporte de ArduPilot.</p>
+</div>
+
+<div class="hoja">
+  <h3 style="margin-top:0">Armado, en orden</h3>
+  <ol class="pasos">
+    <li>Meter los cuatro liners de policarbonato en los ductos del cuerpo y pegarlos.</li>
+    <li>Pasar el cuadrado de carbono por el canal de la capa del medio. Cada motor va en un puente
+      de dos listones, como en el banco, porque el tubo no entra por debajo del motor.</li>
+    <li>Atornillar los motores, pasar los cables por las ventanas de las cajas y sellar los pasos
+      con epoxi.</li>
+    <li>Batería y ESC en una caja, controladora, receptor y GPS en la otra.</li>
+    <li>Armar el bloqueo por agua con el umbral que medimos en la fase 1 y probarlo 50 veces con el
+      imán.</li>
+    <li>Configurar ArduPilot desde la laptop y probar todo sin hélices.</li>
+    <li>Calzar las ocho rejillas, poner la piel y la faja dorada.</li>
+  </ol>
+
+  <h3>El primer vuelo, atado</h3>
+  <div class="par">
+    <div>
+      <ol class="pasos">
+        <li>Campo abierto, día sin viento, sin gente alrededor.</li>
+        <li>Una estaca bien clavada y una soga de unos 3 m al aro. Nada cuelga del aro: el aro es
+          el salvavidas.</li>
+        <li>Conos a 10 m (aprox.). Los tres detrás de los conos, con anteojos.</li>
+        <li>Uno pilotea con la radio, otro mira batería y posición en la laptop, otro filma y lleva
+          la lista de chequeo.</li>
+        <li>Despegar a un metro, mantener 3 minutos y aterrizar.</li>
+      </ol>
+    </div>
+    <figure><img src="img/10-vuelo-atado.jpg" alt="Primer vuelo atado en un campo"><figcaption>Imagen ilustrativa.</figcaption></figure>
+  </div>
+
+  <div class="regla">
+    <p><strong>Listo para la demo si</strong> vuela atado 3 minutos estable, el corte por agua
+      apaga los motores y se destraba solo con el imán. Después viene el viento, con el dron atado
+      arriba de un auto.</p>
+  </div>
+</div>
+
+<div class="hoja">
+  <h2>La botonera</h2>
+  <p class="intro">La caja que queda fija en el puesto del guardavidas. Va por un solo cable USB&#8209;C a
+    la laptop, que le da corriente y lleva los mensajes. No tiene pila.</p>
+  <div class="par">
+    <div>
+      <p><strong>INCIDENTE REAL</strong> sirve con alerta y sin ella: quiere decir "hay alguien en
+        peligro, salí". Si el guardavidas vio a alguien antes que la cámara, aprieta igual y el dron
+        va al candidato más probable. Ese apriete queda registrado como un caso que la cámara no vio,
+        y es el dato que más sirve para mejorar la detección.</p>
+      <p><strong>FALSO POSITIVO</strong> cancela y el dron vuelve. La pantallita muestra la
+        probabilidad, el sector y la cuenta regresiva.</p>
+      <p>Todo se compra hecho: caja estanca IP65 de 200 x 120 x 75 mm, dos pulsadores de 30 mm,
+        pantalla OLED de 1,3 pulgadas, un ESP32, un LED, un buzzer y un prensacable. La lista con qué
+        buscar está en <code>gavia-hardware/cad/blender/botonera_piezas.md</code>.</p>
+    </div>
+    <figure><img src="../renders/gavia_botonera_1_tres_cuartos.jpg" alt="Render de la botonera"><figcaption>Render del modelo 3D.</figcaption></figure>
+  </div>
+
+  <h3>Después del primer prototipo</h3>
+  <figure class="grande"><img src="img/11-playa.jpg" alt="El aro flotando junto a una persona y el guardavidas entrando al agua"><figcaption>Imagen ilustrativa. El guardavidas siempre va al rescate: el dron gana tiempo.</figcaption></figure>
+  <ul class="lista" style="margin-top:4mm">
+    <li>IA a bordo: una Raspberry Pi 5 con cámara para guiar el último tramo (unos USD 370).</li>
+    <li>Evaluar la cámara de la torre: cuántos píxeles ocupa una cabeza a 100 y 150 m con cada lente.</li>
+    <li>Ideas para más adelante: que el dron patrulle si puede cargarse solo, y playas sin
+      guardavidas, siempre con una persona que va al rescate desde una base.</li>
+  </ul>
+</div>
+
+</body>
+</html>

@@ -23,6 +23,7 @@ no se suben al repo (se regeneran), las fichas sí. Los renders finales en JPG e
 | `v3_aro.py` | Concepto 3, aro abierto (el que ganó) |
 | `gavia_aro_r1.py`, `gavia_aro_r2.py` | Dos rondas de refinamiento del aro |
 | `gavia_aro.py` | Versión final |
+| `gavia_botonera.py` | Botonera del guardavidas: caja estanca, dos pulsadores, pantallita y cable USB-C. Piezas en `botonera_piezas.md` |
 
 Los parámetros tienen nombre (`helice_pulg`, `radio_medio`, `alto`, `abertura_rejilla`,
 `nervios_rejilla`, `cinta_vueltas` y otros), así cada cambio es reproducible.

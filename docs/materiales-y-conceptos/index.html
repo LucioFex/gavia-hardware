@@ -71,8 +71,10 @@
   <p class="bajada">Qué es cada cosa del dron flotador, de qué está hecha y cómo se fabrica. Para leer
     antes de comprar, pedir o armar algo.</p>
   <figure><img src="../renders/gavia_aro_1_tres_cuartos.jpg" alt="El aro de Gavia en tres cuartos"></figure>
-  <p class="version">Versión del 30/10/2026. Se actualiza en cada sesión de trabajo. Los números son
-    aproximados hasta medirlos en banco y en pileta. Las imágenes son renders, no fotos de pruebas.</p>
+  <p class="version">Versión del 30/10/2026, actualizada con las simplificaciones del plan de
+    prototipo. Se actualiza en cada sesión de trabajo. Los números son aproximados hasta medirlos en
+    banco y en pileta. Las imágenes son renders, no fotos de pruebas. El paso a paso de qué comprar y
+    cómo armar está en el roadmap del prototipo.</p>
 </div>
 
 <div class="hoja">
@@ -132,7 +134,7 @@
         </g>
         <g font-size="8.2" fill="#1F1F1F">
           <text x="262" y="6.8">Rejilla, ranuras de 5 mm</text>
-          <text x="262" y="28.8">Liner, tubo rígido impreso</text>
+          <text x="262" y="28.8">Liner, tubo de policarbonato</text>
           <text x="262" y="47.8">Hélice de 8″</text>
           <text x="262" y="68.8">Motor</text>
           <text x="262" y="88.8">Rejilla de abajo</text>
@@ -151,8 +153,8 @@
       <div>
         <p>La rejilla va arriba y abajo de cada hélice. Tiene flejes de 2 mm con ranuras de 5 mm y
           cinco nervios que los traban, así un dedo no entra ni abre la ranura.</p>
-        <p>En el banco de pruebas se corta en acrílico con láser. En el dron real va impresa en PETG o
-          ASA, en naranja para que se vea dónde están las hélices.</p>
+        <p>Se corta en acrílico con láser, del mismo archivo en el banco y en el dron. En el dron va
+          naranja, para que se vea dónde están las hélices.</p>
       </div>
       <img src="img/rejilla.png" alt="La rejilla vista de frente">
     </div>
@@ -169,27 +171,33 @@
         aunque se corte o se pinche. Es la de las tablas de bodyboard y los chalecos. La de celda
         abierta, como la de un colchón, chupa agua y se hunde.</dd>
       <dt>EPS<small>telgopor</small></dt>
-      <dd>El telgopor común. Barato y fácil de cortar, pero frágil. Sirve para la maqueta de pileta.</dd>
+      <dd>El telgopor común. Barato y fácil de cortar, pero frágil. Es el cuerpo del prototipo: la
+        maqueta de pileta, en tres capas de 30 mm, pasa a ser el cuerpo del dron, protegida por la piel.</dd>
       <dt>XPS<small>Polyfan</small></dt>
       <dd>El telgopor duro de la construcción. Más firme y absorbe menos agua que el EPS.</dd>
       <dt>EPP</dt>
       <dd>Polipropileno expandido, el de los drones de juguete y los paragolpes. Aguanta golpes y
-        vuelve a su forma. Es el ideal para el cuerpo, pero en bloque cuesta conseguirlo en Argentina.</dd>
+        vuelve a su forma. Es el ideal para un cuerpo futuro, pero en bloque cuesta conseguirlo en
+        Argentina, así que el prototipo va en EPS.</dd>
       <dt>Piel</dt>
       <dd>Una capa fina sobre la espuma que la protege del sol, la sal y los raspones y le da el acabado
-        crema. Puede ser poliurea, un recubrimiento elástico que se aplica como pintura gruesa, o resina.</dd>
-      <dt>PLA</dt>
-      <dd>El plástico más común para imprimir en 3D. Se ablanda al sol, así que en la playa no sirve.</dd>
-      <dt>PETG</dt>
-      <dd>El plástico de las botellas, modificado para imprimir. Aguanta agua y golpes.</dd>
-      <dt>ASA</dt>
-      <dd>El de las piezas de auto que van a la intemperie. Aguanta el sol sin ponerse amarillo ni
-        quebradizo.</dd>
+        crema. Para el prototipo, epoxi con tela de vidrio, como una tabla de surf de EPS, o una
+        membrana acrílica a pincel.</dd>
+      <dt>Epoxi y poliéster<small>resinas</small></dt>
+      <dd>Las dos endurecen una tela de vidrio. Sobre telgopor solo va epoxi: la resina poliéster lo
+        derrite. Un taller de tablas de surf sabe laminarla.</dd>
+      <dt>PLA, PETG y ASA</dt>
+      <dd>Plásticos para imprimir en 3D. El PLA se ablanda al sol, el PETG aguanta agua y golpes y el
+        ASA aguanta el sol. El prototipo no usa ninguno porque nada se imprime.</dd>
       <dt>Policarbonato</dt>
       <dd>Plástico transparente casi irrompible, en láminas. En 1 mm se enrolla para hacer el ducto del
-        banco de pruebas.</dd>
+        banco y los cuatro liners del dron, todos de la misma plancha.</dd>
       <dt>Acrílico</dt>
-      <dd>Plástico rígido que se corta con láser. Las rejillas del banco van en acrílico de 6 mm.</dd>
+      <dd>Plástico rígido que se corta con láser. Las rejillas del banco y del dron van en acrílico de
+        6 mm. Si se rompe con un golpe, el plan B es policarbonato cortado con router.</dd>
+      <dt>MDF<small>fibrofácil</small></dt>
+      <dd>Placa de madera prensada que se corta muy bien con láser. Todo el banco sale de dos planchas
+        de 5,5 mm, como un mueble para armar con cola vinílica y unos tornillos.</dd>
       <dt>Fibra de carbono</dt>
       <dd>Tubos muy livianos y rígidos. Un cuadrado de tubos une los cuatro motores adentro de la
         espuma. No va en contacto con aluminio, porque en agua salada los dos juntos se corroen.</dd>
@@ -198,16 +206,12 @@
 
   <section>
     <h2>Cómo se fabrica</h2>
-    <p class="intro">El cuerpo se corta en espuma. Solo las piezas chicas y rígidas se imprimen.</p>
+    <p class="intro">El cuerpo se corta en espuma. Las piezas chicas salen del láser o se compran hechas.</p>
     <dl>
-      <dt>Impresora 3D<small>y su cama</small></dt>
-      <dd>Fabrica la pieza capa por capa dentro de una caja. La cama, la base donde se apoya, mide de
-        22 a 25 cm en las comunes. El aro mide 80 cm, así que no entra.</dd>
-      <dt>Qué se imprime</dt>
-      <dd>Los liners de los ductos, las rejillas y las cajas estancas con sus tapas, en PETG o ASA.</dd>
-      <dt>Servicio de impresión</dt>
-      <dd>Un local o una persona con impresoras. Le mandás el archivo y te devuelve la pieza. Cobra por
-        material y por horas de máquina.</dd>
+      <dt>Nada se imprime</dt>
+      <dd>La cama de una impresora 3D común mide de 22 a 25 cm y el aro 80, así que el cuerpo no entra.
+        Las piezas chicas tampoco se imprimen: los liners son policarbonato enrollado, las rejillas
+        salen del láser y las cajas son estancas de electricidad, compradas hechas.</dd>
       <dt>Hilo caliente</dt>
       <dd>Un alambre fino que se calienta y corta el telgopor derritiéndolo, como un cuchillo caliente
         en manteca. Hay máquinas que siguen un dibujo de la computadora.</dd>
@@ -215,14 +219,17 @@
       <dd>Una máquina que talla con una fresa siguiendo un archivo. Hace los huecos de los ductos, los
         agujeros para las manos y los cantos redondeados. Las tienen las casas de cartelería.</dd>
       <dt>Corte láser</dt>
-      <dd>Un láser que corta láminas planas siguiendo un dibujo 2D. Así salen las rejillas del banco.</dd>
+      <dd>Un láser que corta láminas planas siguiendo un dibujo 2D. Así salen el banco en MDF y las
+        rejillas en acrílico. Se pide con el material del taller incluido.</dd>
       <dt>Por capas</dt>
-      <dd>Las planchas de espuma vienen de 5 cm y el aro tiene 9 cm de alto. Se cortan dos capas con la
-        misma forma, se pegan y se lijan.</dd>
+      <dd>El aro tiene 9 cm de alto y se arma con tres capas de telgopor de 30 mm. Las de arriba y abajo
+        son iguales y la del medio lleva los huecos de mano y el canal del carbono. Se pegan y se lijan.</dd>
       <dt>Modelo 3D</dt>
-      <dd>El archivo con la forma exacta, hecho en Blender. De ahí salen los archivos para cada máquina.</dd>
+      <dd>El archivo con la forma exacta, hecho en Blender. De ahí salen los dibujos de cada capa y de
+        cada pieza.</dd>
       <dt>SVG, DXF y STL</dt>
-      <dd>SVG y DXF son dibujos 2D para corte láser o hilo caliente. STL es una forma 3D para imprimir.</dd>
+      <dd>SVG y DXF son dibujos 2D para corte láser o hilo caliente. Son los que se mandan al taller.
+        STL es una forma 3D para imprimir, que hoy no usamos.</dd>
       <dt>Script paramétrico</dt>
       <dd>Un programa que arma el modelo a partir de números como el diámetro, el alto o la ranura. Se
         cambia un número y se rehace todo, renders y planos incluidos.</dd>
@@ -231,13 +238,14 @@
 
   <section>
     <h2>Comprar</h2>
-    <p class="intro">La lista con links y precios está en <em>bom/lista-de-materiales.md</em>.</p>
+    <p class="intro">La lista con links y precios está en <em>bom/lista-de-materiales.md</em> y el paso a
+      paso en <em>docs/roadmap/</em>.</p>
     <dl>
       <dt>Local o desde China</dt>
       <dd>En MercadoLibre, lo que viene de China tarda una o dos semanas y paga impuestos aparte.</dd>
       <dt>Límite de envíos</dt>
-      <dd>Las publicaciones de China avisan hasta 5 envíos internacionales por año (a validar). Conviene
-        juntar las compras importadas.</dd>
+      <dd>Las publicaciones de China avisan hasta 5 envíos internacionales por año por persona (a
+        validar). Si cada uno de los tres compra con su cuenta, cada uno usa su propio cupo.</dd>
       <dt>Dólar MEP</dt>
       <dd>La cotización que usamos para pasar los precios a dólares y comparar.</dd>
     </dl>
@@ -260,17 +268,21 @@
       <dd>El tubo alrededor de la hélice. Protege, y si la boca de entrada es redondeada (el labio)
         puede sumar empuje. Cuánto suma se mide en el banco.</dd>
       <dt>ESC<small>variador</small></dt>
-      <dd>Traduce la orden de la controladora en la corriente que mueve el motor. Uno por motor.</dd>
+      <dd>Traduce la orden de la controladora en la corriente que mueve el motor. Uno por motor, o los
+        cuatro en una sola placa (ESC 4 en 1) apilada con la controladora: eso es un stack, que se
+        compra junto y trae el reparto de la batería. La contra: si se quema un canal, se cambia la
+        placa entera.</dd>
       <dt>LiPo 6S</dt>
       <dd>Batería de polímero de litio con 6 celdas en serie, unos 22,2 V. Potente y delicada: se carga
         con cargador balanceador y se guarda en bolsa ignífuga.</dd>
-      <dt>mAh</dt>
-      <dd>La capacidad. 5200 mAh son 5,2 A durante una hora, en teoría.</dd>
-      <dt>C<small>descarga</small></dt>
-      <dd>Cuántas veces su capacidad puede entregar sin dañarse. Una de 5,2 Ah y 80C entrega hasta
-        416 A. El dron a fondo pide unos 150 A.</dd>
+      <dt>mAh y C<small>capacidad y descarga</small></dt>
+      <dd>5200 mAh son 5,2 A durante una hora, en teoría. La C dice cuántas veces su capacidad puede
+        entregar sin dañarse: una de 5,2 Ah y 80C entrega hasta 416 A, y el dron a fondo pide unos
+        150 A.</dd>
       <dt>Cargador balanceador</dt>
-      <dd>Carga cada celda pareja. Si una celda se pasa de carga, la batería se infla o se prende fuego.</dd>
+      <dd>Carga cada celda pareja. Si una celda se pasa de carga, la batería se infla o se prende fuego.
+        El del prototipo (iMAX B6AC de 80 W) trae la fuente adentro y se enchufa directo a 220 V, así
+        nadie cablea una fuente abierta a la red.</dd>
       <dt>XT60 y XT90</dt>
       <dd>Las fichas de batería. El número indica la corriente que aguantan, 60 y 90 A.</dd>
       <dt>Controladora de vuelo</dt>
@@ -282,12 +294,11 @@
       <dd>Dice dónde está el dron y hacia dónde mira.</dd>
       <dt>Radio ELRS</dt>
       <dd>El control remoto del piloto de seguridad, de largo alcance. El mismo enlace lleva la
-        telemetría.</dd>
-      <dt>Telemetría MAVLink</dt>
-      <dd>El idioma con el que el dron y la laptop se pasan datos: posición, batería y estado.</dd>
+        telemetría MAVLink, el idioma con el que el dron y la laptop se pasan posición, batería y
+        estado.</dd>
       <dt>PDB y BEC</dt>
-      <dd>La PDB reparte la batería a los cuatro ESC y mide la corriente total. El BEC baja el voltaje a
-        5 V para la electrónica chica.</dd>
+      <dd>La PDB reparte la batería a los cuatro ESC y mide la corriente total. En un stack ya viene en
+        el ESC 4 en 1. El BEC baja el voltaje a 5 V para la electrónica chica.</dd>
     </dl>
   </section>
 </div>
@@ -299,10 +310,12 @@
     <dl>
       <dt>Banco de empuje</dt>
       <dd>Un solo motor con su hélice adentro de un ducto, apoyado en una balanza electrónica. Se mide
-        cuánto empuja y cuánto consume, con y sin rejillas.</dd>
+        cuánto empuja y cuánto consume en tres configuraciones: hélice libre, ducto con labio, y ducto
+        con labio y rejillas.</dd>
       <dt>Celda de carga y HX711</dt>
       <dd>La celda es el sensor de una balanza electrónica. El HX711 es la plaquita que la lee y le pasa
-        el dato al ESP32.</dd>
+        el dato al ESP32. Va la de 10 kg, porque con el banco encima la de 5 kg queda justa (aprox., a
+        validar).</dd>
       <dt>ESP32</dt>
       <dd>Una plaquita programable y barata. En el banco lee la balanza, maneja el motor y guarda los
         datos. La botonera del guardavidas usa la misma placa.</dd>
@@ -322,8 +335,12 @@
       <dd>La inclinación cuando alguien se agarra de un lado. Con mucha carga, un flotador chato se
         para de canto, como una tabla agarrada de la punta. Por eso ganó el aro.</dd>
       <dt>Maqueta de pileta</dt>
-      <dd>Un aro de telgopor del tamaño real, sin electrónica, con pesas donde irían la batería y los
-        motores. Mide si de verdad sostiene a un adulto agarrado.</dd>
+      <dd>El cuerpo del aro en telgopor, sin electrónica, con pesas donde irían la batería y los
+        motores. Mide si de verdad sostiene a un adulto agarrado. Si pasa, ese mismo cuerpo es el del
+        dron.</dd>
+      <dt>IP65 e IP67</dt>
+      <dd>Cuánto aguanta el agua una caja. IP65 aguanta chorros y salpicaduras, IP67 aguanta estar
+        sumergida a 1 m durante 30 minutos. Las cajas del prototipo son IP65 y se prueban en la pileta.</dd>
       <dt>Corte por agua</dt>
       <dd>Dos electrodos detectan el agua de mar y cortan los motores. En el agua las hélices no giran.</dd>
       <dt>Latch y reed switch</dt>
