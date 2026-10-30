@@ -1,4 +1,6 @@
-# dron-salvavidas-hardware
+# gavia-hardware
+
+Parte de Gavia, un dron salvavidas autónomo con IA.
 
 Modelos 3D, lista de materiales e instrucciones de armado del dron salvavidas autónomo: cápsula
 liberadora, protectores y frame.
@@ -39,9 +41,9 @@ En diseño. Todavía no hay modelos publicados.
 
 ## Repos del proyecto
 
-- [dron-salvavidas-vision](https://github.com/LucioFex/dron-salvavidas-vision): detección y lógica de decisión
-- [dron-salvavidas-firmware](https://github.com/LucioFex/dron-salvavidas-firmware): botonera ESP32 y configuración de ArduPilot
-- [dron-salvavidas-hardware](https://github.com/LucioFex/dron-salvavidas-hardware): modelos 3D y lista de materiales (este repo)
+- [gavia-vision](https://github.com/LucioFex/gavia-vision): detección y lógica de decisión
+- [gavia-firmware](https://github.com/LucioFex/gavia-firmware): botonera ESP32 y configuración de ArduPilot
+- [gavia-hardware](https://github.com/LucioFex/gavia-hardware): modelos 3D y lista de materiales (este repo)
 
 ## Licencia
 
