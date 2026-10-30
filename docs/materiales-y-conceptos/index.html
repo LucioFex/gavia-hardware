@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Gavia · Materiales y conceptos</title>
+<!--
+  Fuente del PDF. Para actualizarlo, editá este archivo y regeneralo (ver README.md).
+  Estilo: papel crema, tinta carbón, Work Sans, oro solo en filetes y naranja solo donde es funcional.
+-->
+<style>
+  @font-face { font-family: "WS"; font-weight: 400; src: local("Work Sans Regular"), local("WorkSans-Regular"), url("file:///C:/Users/lucia/AppData/Local/Microsoft/Windows/Fonts/WorkSans-Regular.ttf"); }
+  @font-face { font-family: "WS"; font-weight: 600; src: local("Work Sans SemiBold"), local("WorkSans-SemiBold"), url("file:///C:/Users/lucia/AppData/Local/Microsoft/Windows/Fonts/WorkSans-SemiBold.ttf"); }
+  @font-face { font-family: "WS"; font-weight: 700; src: local("Work Sans Bold"), local("WorkSans-Bold"), url("file:///C:/Users/lucia/AppData/Local/Microsoft/Windows/Fonts/WorkSans-Bold.ttf"); }
+  @font-face { font-family: "WS"; font-weight: 800; src: local("Work Sans ExtraBold"), local("WorkSans-ExtraBold"), url("file:///C:/Users/lucia/AppData/Local/Microsoft/Windows/Fonts/WorkSans-ExtraBold.ttf"); }
+
+  :root {
+    --crema: #F8F4EB; --carbon: #1F1F1F; --sec: #5C534A; --linea: #D9CFC0;
+    --oro: #A8894A; --naranja: #F26B1D; --espuma: #EAE1CF;
+  }
+  @page { size: A4; margin: 20mm 20mm 22mm; background: #F8F4EB;
+    @bottom-left { content: "Gavia"; font-family: "Work Sans"; font-weight: 800; font-size: 8pt; color: #1F1F1F; }
+    @bottom-right { content: "Materiales y conceptos · " counter(page); font-family: "Work Sans"; font-size: 7.6pt; color: #5C534A; } }
+  @page tapa { @bottom-right { content: none; } }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--crema); color: var(--carbon);
+    -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: "WS", "Work Sans", sans-serif; font-size: 10.2pt; line-height: 1.5;
+    font-variant-numeric: lining-nums; }
+
+  .hoja { break-after: page; }
+  .hoja:last-child { break-after: auto; }
+  .tapa { page: tapa; }
+
+  /* tapa */
+  .tapa h1 { font-weight: 800; font-size: 40pt; line-height: 1.02; letter-spacing: -0.03em;
+    margin: 14mm 0 6mm; max-width: 15ch; text-wrap: balance; }
+  .tapa .bajada { font-size: 13pt; line-height: 1.45; color: var(--sec); max-width: 52ch; margin: 0; }
+  .tapa figure { margin: 12mm -20mm 0; height: 118mm; overflow: hidden; }
+  .tapa figure img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 58%; display: block; }
+  .tapa .version { margin-top: 10mm; font-size: 9pt; color: var(--sec); max-width: 60ch; }
+  .filete { width: 22mm; height: 1.2mm; background: var(--oro); margin-top: 6mm; }
+
+  /* secciones */
+  h2 { font-weight: 800; font-size: 20pt; letter-spacing: -0.02em; line-height: 1.1;
+    margin: 0 0 2.5mm; break-after: avoid; }
+  .intro { color: var(--sec); max-width: 62ch; margin: 0 0 7mm; }
+  section + section { margin-top: 12mm; }
+  .nueva { break-before: page; }
+
+  dl { margin: 0; display: grid; grid-template-columns: 44mm 1fr; column-gap: 7mm; }
+  dt, dd { padding: 2.6mm 0; border-top: 0.25mm solid var(--linea); break-inside: avoid; }
+  dt { font-weight: 700; line-height: 1.3; letter-spacing: -0.005em; }
+  dt small { display: block; font-weight: 400; color: var(--sec); font-size: 8.4pt; margin-top: 0.6mm; }
+  dd { margin: 0; max-width: 68ch; }
+  dd em { font-style: normal; font-weight: 600; }
+
+  /* diagrama */
+  .diagrama { margin: 4mm -6mm 2mm; }
+  .diagrama svg { width: 100%; height: auto; display: block; }
+  .nota { font-size: 8.4pt; color: var(--sec); margin: 2mm 0 0; }
+  .dos { display: grid; grid-template-columns: 1fr 58mm; gap: 9mm; align-items: center; margin-top: 8mm; }
+  .dos img { width: 100%; display: block; }
+  .dos p { margin: 0 0 3mm; max-width: 60ch; }
+</style>
+</head>
+<body>
+
+<div class="hoja tapa">
+  <div class="filete"></div>
+  <h1>Materiales y conceptos de Gavia</h1>
+  <p class="bajada">Qué es cada cosa del dron flotador, de qué está hecha y cómo se fabrica. Para leer
+    antes de comprar, pedir o armar algo.</p>
+  <figure><img src="../renders/gavia_aro_1_tres_cuartos.jpg" alt="El aro de Gavia en tres cuartos"></figure>
+  <p class="version">Versión del 30/10/2026. Se actualiza en cada sesión de trabajo. Los números son
+    aproximados hasta medirlos en banco y en pileta. Las imágenes son renders, no fotos de pruebas.</p>
+</div>
+
+<div class="hoja">
+  <section>
+    <h2>El aro por dentro</h2>
+    <p class="intro">Un aro de espuma de 80 cm con cuatro hélices metidas en tubos dentro del propio
+      aro. Este es un corte por el centro de uno de los cuatro ductos.</p>
+    <div class="diagrama">
+      <svg viewBox="-150 -30 542 132" xmlns="http://www.w3.org/2000/svg" font-family="WS, Work Sans, sans-serif">
+        <!-- cota del ducto -->
+        <g stroke="#5C534A" stroke-width="0.5" fill="none">
+          <line x1="17" y1="-14" x2="230.2" y2="-14"/>
+          <line x1="17" y1="-18" x2="17" y2="-10"/><line x1="230.2" y1="-18" x2="230.2" y2="-10"/>
+        </g>
+        <text x="123.6" y="-18" font-size="7.5" fill="#5C534A" text-anchor="middle">213 mm de ducto</text>
+        <!-- espuma con piel -->
+        <rect x="0" y="0" width="17" height="90" rx="6" fill="#EAE1CF" stroke="#1F1F1F" stroke-width="0.7"/>
+        <rect x="230.2" y="0" width="17" height="90" rx="6" fill="#EAE1CF" stroke="#1F1F1F" stroke-width="0.7"/>
+        <!-- liner -->
+        <rect x="15" y="1" width="2" height="88" fill="#F26B1D"/>
+        <rect x="230.2" y="1" width="2" height="88" fill="#F26B1D"/>
+        <!-- rejillas: flejes de 2 por 6 mm cada 7 mm -->
+        <g fill="#F26B1D" id="rej">
+          <rect x="18.0" y="1" width="2" height="6"/><rect x="25.0" y="1" width="2" height="6"/>
+          <rect x="32.0" y="1" width="2" height="6"/><rect x="39.0" y="1" width="2" height="6"/>
+          <rect x="46.0" y="1" width="2" height="6"/><rect x="53.0" y="1" width="2" height="6"/>
+          <rect x="60.0" y="1" width="2" height="6"/><rect x="67.0" y="1" width="2" height="6"/>
+          <rect x="74.0" y="1" width="2" height="6"/><rect x="81.0" y="1" width="2" height="6"/>
+          <rect x="88.0" y="1" width="2" height="6"/><rect x="95.0" y="1" width="2" height="6"/>
+          <rect x="102.0" y="1" width="2" height="6"/><rect x="109.0" y="1" width="2" height="6"/>
+          <rect x="116.0" y="1" width="2" height="6"/><rect x="123.0" y="1" width="2" height="6"/>
+          <rect x="130.0" y="1" width="2" height="6"/><rect x="137.0" y="1" width="2" height="6"/>
+          <rect x="144.0" y="1" width="2" height="6"/><rect x="151.0" y="1" width="2" height="6"/>
+          <rect x="158.0" y="1" width="2" height="6"/><rect x="165.0" y="1" width="2" height="6"/>
+          <rect x="172.0" y="1" width="2" height="6"/><rect x="179.0" y="1" width="2" height="6"/>
+          <rect x="186.0" y="1" width="2" height="6"/><rect x="193.0" y="1" width="2" height="6"/>
+          <rect x="200.0" y="1" width="2" height="6"/><rect x="207.0" y="1" width="2" height="6"/>
+          <rect x="214.0" y="1" width="2" height="6"/><rect x="221.0" y="1" width="2" height="6"/>
+          <rect x="17" y="0.5" width="213.2" height="1" />
+        </g>
+        <use href="#rej" transform="translate(0 89) scale(1 -1)"/>
+        <!-- brazo de carbono, motor y hélice -->
+        <line x1="17" y1="58" x2="110" y2="58" stroke="#1F1F1F" stroke-width="4" stroke-linecap="round"/>
+        <rect x="109.6" y="47" width="28" height="16" rx="2" fill="#1F1F1F"/>
+        <line x1="22" y1="45" x2="225.2" y2="45" stroke="#5C534A" stroke-width="2.6" stroke-linecap="round"/>
+        <circle cx="123.6" cy="45" r="5" fill="#1F1F1F"/>
+        <!-- etiquetas -->
+        <g stroke="#5C534A" stroke-width="0.4" fill="none">
+          <line x1="205" y1="4" x2="258" y2="4"/>
+          <line x1="232" y1="26" x2="258" y2="26"/>
+          <line x1="218" y1="45" x2="258" y2="45"/>
+          <line x1="137.6" y1="56" x2="258" y2="66"/>
+          <line x1="205" y1="86" x2="258" y2="86"/>
+          <line x1="0.4" y1="14" x2="-10" y2="14"/>
+          <line x1="8" y1="36" x2="-10" y2="36"/>
+          <line x1="60" y1="58" x2="-10" y2="58"/>
+        </g>
+        <g font-size="8.2" fill="#1F1F1F">
+          <text x="262" y="6.8">Rejilla, ranuras de 5 mm</text>
+          <text x="262" y="28.8">Liner, tubo rígido impreso</text>
+          <text x="262" y="47.8">Hélice de 8″</text>
+          <text x="262" y="68.8">Motor</text>
+          <text x="262" y="88.8">Rejilla de abajo</text>
+          <text x="-14" y="16.8" text-anchor="end">Piel</text>
+          <text x="-14" y="38.8" text-anchor="end">Espuma de celda cerrada</text>
+          <text x="-14" y="60.8" text-anchor="end">Brazo de carbono</text>
+        </g>
+        <text x="8.5" y="100" font-size="7" fill="#5C534A" text-anchor="middle">centro del aro</text>
+        <text x="238.7" y="100" font-size="7" fill="#5C534A" text-anchor="middle">borde de afuera</text>
+      </svg>
+    </div>
+    <p class="nota">El aro mide 90 mm de alto. Corte por el centro de un ducto. En el resto del aro la
+      espuma es maciza, con las dos cajas estancas y los huecos para las manos (aprox., a validar).</p>
+
+    <div class="dos">
+      <div>
+        <p>La rejilla va arriba y abajo de cada hélice. Tiene flejes de 2 mm con ranuras de 5 mm y
+          cinco nervios que los traban, así un dedo no entra ni abre la ranura.</p>
+        <p>En el banco de pruebas se corta en acrílico con láser. En el dron real va impresa en PETG o
+          ASA, en naranja para que se vea dónde están las hélices.</p>
+      </div>
+      <img src="img/rejilla.png" alt="La rejilla vista de frente">
+    </div>
+  </section>
+</div>
+
+<div class="hoja">
+  <section>
+    <h2>Materiales</h2>
+    <p class="intro">De qué está hecho cada parte y por qué.</p>
+    <dl>
+      <dt>Espuma de celda cerrada</dt>
+      <dd>Millones de burbujitas de aire, cada una sellada. El agua no pasa de una a otra, así que flota
+        aunque se corte o se pinche. Es la de las tablas de bodyboard y los chalecos. La de celda
+        abierta, como la de un colchón, chupa agua y se hunde.</dd>
+      <dt>EPS<small>telgopor</small></dt>
+      <dd>El telgopor común. Barato y fácil de cortar, pero frágil. Sirve para la maqueta de pileta.</dd>
+      <dt>XPS<small>Polyfan</small></dt>
+      <dd>El telgopor duro de la construcción. Más firme y absorbe menos agua que el EPS.</dd>
+      <dt>EPP</dt>
+      <dd>Polipropileno expandido, el de los drones de juguete y los paragolpes. Aguanta golpes y
+        vuelve a su forma. Es el ideal para el cuerpo, pero en bloque cuesta conseguirlo en Argentina.</dd>
+      <dt>Piel</dt>
+      <dd>Una capa fina sobre la espuma que la protege del sol, la sal y los raspones y le da el acabado
+        crema. Puede ser poliurea, un recubrimiento elástico que se aplica como pintura gruesa, o resina.</dd>
+      <dt>PLA</dt>
+      <dd>El plástico más común para imprimir en 3D. Se ablanda al sol, así que en la playa no sirve.</dd>
+      <dt>PETG</dt>
+      <dd>El plástico de las botellas, modificado para imprimir. Aguanta agua y golpes.</dd>
+      <dt>ASA</dt>
+      <dd>El de las piezas de auto que van a la intemperie. Aguanta el sol sin ponerse amarillo ni
+        quebradizo.</dd>
+      <dt>Policarbonato</dt>
+      <dd>Plástico transparente casi irrompible, en láminas. En 1 mm se enrolla para hacer el ducto del
+        banco de pruebas.</dd>
+      <dt>Acrílico</dt>
+      <dd>Plástico rígido que se corta con láser. Las rejillas del banco van en acrílico de 6 mm.</dd>
+      <dt>Fibra de carbono</dt>
+      <dd>Tubos muy livianos y rígidos. Un cuadrado de tubos une los cuatro motores adentro de la
+        espuma. No va en contacto con aluminio, porque en agua salada los dos juntos se corroen.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Cómo se fabrica</h2>
+    <p class="intro">El cuerpo se corta en espuma. Solo las piezas chicas y rígidas se imprimen.</p>
+    <dl>
+      <dt>Impresora 3D<small>y su cama</small></dt>
+      <dd>Fabrica la pieza capa por capa dentro de una caja. La cama, la base donde se apoya, mide de
+        22 a 25 cm en las comunes. El aro mide 80 cm, así que no entra.</dd>
+      <dt>Qué se imprime</dt>
+      <dd>Los liners de los ductos, las rejillas y las cajas estancas con sus tapas, en PETG o ASA.</dd>
+      <dt>Servicio de impresión</dt>
+      <dd>Un local o una persona con impresoras. Le mandás el archivo y te devuelve la pieza. Cobra por
+        material y por horas de máquina.</dd>
+      <dt>Hilo caliente</dt>
+      <dd>Un alambre fino que se calienta y corta el telgopor derritiéndolo, como un cuchillo caliente
+        en manteca. Hay máquinas que siguen un dibujo de la computadora.</dd>
+      <dt>Router CNC</dt>
+      <dd>Una máquina que talla con una fresa siguiendo un archivo. Hace los huecos de los ductos, los
+        agujeros para las manos y los cantos redondeados. Las tienen las casas de cartelería.</dd>
+      <dt>Corte láser</dt>
+      <dd>Un láser que corta láminas planas siguiendo un dibujo 2D. Así salen las rejillas del banco.</dd>
+      <dt>Por capas</dt>
+      <dd>Las planchas de espuma vienen de 5 cm y el aro tiene 9 cm de alto. Se cortan dos capas con la
+        misma forma, se pegan y se lijan.</dd>
+      <dt>Modelo 3D</dt>
+      <dd>El archivo con la forma exacta, hecho en Blender. De ahí salen los archivos para cada máquina.</dd>
+      <dt>SVG, DXF y STL</dt>
+      <dd>SVG y DXF son dibujos 2D para corte láser o hilo caliente. STL es una forma 3D para imprimir.</dd>
+      <dt>Script paramétrico</dt>
+      <dd>Un programa que arma el modelo a partir de números como el diámetro, el alto o la ranura. Se
+        cambia un número y se rehace todo, renders y planos incluidos.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Comprar</h2>
+    <p class="intro">La lista con links y precios está en <em>bom/lista-de-materiales.md</em>.</p>
+    <dl>
+      <dt>Local o desde China</dt>
+      <dd>En MercadoLibre, lo que viene de China tarda una o dos semanas y paga impuestos aparte.</dd>
+      <dt>Límite de envíos</dt>
+      <dd>Las publicaciones de China avisan hasta 5 envíos internacionales por año (a validar). Conviene
+        juntar las compras importadas.</dd>
+      <dt>Dólar MEP</dt>
+      <dd>La cotización que usamos para pasar los precios a dólares y comparar.</dd>
+    </dl>
+  </section>
+</div>
+
+<div class="hoja">
+  <section>
+    <h2>Lo que hace volar al dron</h2>
+    <p class="intro">La electrónica, de la batería a la hélice.</p>
+    <dl>
+      <dt>Motor brushless</dt>
+      <dd>Motor sin escobillas, el de todos los drones. Gira con los pulsos que le manda el ESC.</dd>
+      <dt>KV</dt>
+      <dd>Vueltas por minuto por cada volt, sin carga. KV bajo con hélice grande da más fuerza y menos
+        velocidad, que es lo que necesita un dron pesado. El candidato es de 900 KV.</dd>
+      <dt>Hélice 8x4,5x3</dt>
+      <dd>8 pulgadas de diámetro (unos 20 cm), 4,5 pulgadas de avance por vuelta y 3 palas.</dd>
+      <dt>Ducto y labio</dt>
+      <dd>El tubo alrededor de la hélice. Protege, y si la boca de entrada es redondeada (el labio)
+        puede sumar empuje. Cuánto suma se mide en el banco.</dd>
+      <dt>ESC<small>variador</small></dt>
+      <dd>Traduce la orden de la controladora en la corriente que mueve el motor. Uno por motor.</dd>
+      <dt>LiPo 6S</dt>
+      <dd>Batería de polímero de litio con 6 celdas en serie, unos 22,2 V. Potente y delicada: se carga
+        con cargador balanceador y se guarda en bolsa ignífuga.</dd>
+      <dt>mAh</dt>
+      <dd>La capacidad. 5200 mAh son 5,2 A durante una hora, en teoría.</dd>
+      <dt>C<small>descarga</small></dt>
+      <dd>Cuántas veces su capacidad puede entregar sin dañarse. Una de 5,2 Ah y 80C entrega hasta
+        416 A. El dron a fondo pide unos 150 A.</dd>
+      <dt>Cargador balanceador</dt>
+      <dd>Carga cada celda pareja. Si una celda se pasa de carga, la batería se infla o se prende fuego.</dd>
+      <dt>XT60 y XT90</dt>
+      <dd>Las fichas de batería. El número indica la corriente que aguantan, 60 y 90 A.</dd>
+      <dt>Controladora de vuelo</dt>
+      <dd>La placa que estabiliza el dron, con sensores de giro y aceleración. Corre ArduPilot.</dd>
+      <dt>ArduPilot</dt>
+      <dd>Software libre de piloto automático. Mantiene el dron estable, vuela a un punto, se posa y
+        aplica las reglas de seguridad si algo falla.</dd>
+      <dt>GPS con brújula</dt>
+      <dd>Dice dónde está el dron y hacia dónde mira.</dd>
+      <dt>Radio ELRS</dt>
+      <dd>El control remoto del piloto de seguridad, de largo alcance. El mismo enlace lleva la
+        telemetría.</dd>
+      <dt>Telemetría MAVLink</dt>
+      <dd>El idioma con el que el dron y la laptop se pasan datos: posición, batería y estado.</dd>
+      <dt>PDB y BEC</dt>
+      <dd>La PDB reparte la batería a los cuatro ESC y mide la corriente total. El BEC baja el voltaje a
+        5 V para la electrónica chica.</dd>
+    </dl>
+  </section>
+</div>
+
+<div class="hoja">
+  <section>
+    <h2>El banco y las mediciones</h2>
+    <p class="intro">Antes de construir el dron se miden los números que hoy son cálculo.</p>
+    <dl>
+      <dt>Banco de empuje</dt>
+      <dd>Un solo motor con su hélice adentro de un ducto, apoyado en una balanza electrónica. Se mide
+        cuánto empuja y cuánto consume, con y sin rejillas.</dd>
+      <dt>Celda de carga y HX711</dt>
+      <dd>La celda es el sensor de una balanza electrónica. El HX711 es la plaquita que la lee y le pasa
+        el dato al ESP32.</dd>
+      <dt>ESP32</dt>
+      <dd>Una plaquita programable y barata. En el banco lee la balanza, maneja el motor y guarda los
+        datos. La botonera del guardavidas usa la misma placa.</dd>
+      <dt>Wattímetro</dt>
+      <dd>Un aparatito que va entre la batería y el ESC y muestra volts, amperes y watts.</dd>
+      <dt>Multímetro</dt>
+      <dd>Mide tensión, corriente y continuidad. Sirve para revisar soldaduras y cables.</dd>
+      <dt>Empuje/peso</dt>
+      <dd>El empuje máximo de los cuatro motores dividido por el peso del dron. Con 2 o más tiene margen
+        para maniobrar y pelearle al viento.</dd>
+      <dt>Newton<small>N</small></dt>
+      <dd>La unidad de fuerza. 10 N es más o menos lo que pesa 1 kg. Un adulto consciente necesita unos
+        40 N de ayuda para mantener la cabeza afuera del agua (Restube).</dd>
+      <dt>Calado y francobordo</dt>
+      <dd>Cuánto se hunde el aro flotando y cuánto queda afuera del agua.</dd>
+      <dt>Escora y pararse de canto</dt>
+      <dd>La inclinación cuando alguien se agarra de un lado. Con mucha carga, un flotador chato se
+        para de canto, como una tabla agarrada de la punta. Por eso ganó el aro.</dd>
+      <dt>Maqueta de pileta</dt>
+      <dd>Un aro de telgopor del tamaño real, sin electrónica, con pesas donde irían la batería y los
+        motores. Mide si de verdad sostiene a un adulto agarrado.</dd>
+      <dt>Corte por agua</dt>
+      <dd>Dos electrodos detectan el agua de mar y cortan los motores. En el agua las hélices no giran.</dd>
+      <dt>Latch y reed switch</dt>
+      <dd>El latch es un circuito que queda trabado cuando se dispara. El reed switch es un interruptor
+        que se cierra con un imán. Juntos hacen que el corte solo se destrabe en tierra.</dd>
+    </dl>
+  </section>
+
+</div>
+
+</body>
+</html>
