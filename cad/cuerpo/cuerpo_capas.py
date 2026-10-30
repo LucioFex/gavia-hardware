@@ -21,7 +21,7 @@ SCRIPT_ARO = os.path.join(AQUI, "..", "blender", "gavia_aro.py")
 CAPA = 30.0  # EPS de 30 mm, tres capas
 RHO_EPS = 30.0  # kg/m3
 LINER = 1.0  # policarbonato de 1 mm, como el ducto del banco
-CANAL = 13.5  # tubo de carbono de 13 mm con juego
+CANAL = 13.5  # caño de aluminio de 12,7 mm (prototipo) o tubo de carbono de 13 mm, con juego
 HUECO_ALTO = 30.0  # los huecos de mano ocupan la capa del medio entera
 RADIO_FONDO_HUECO = 9.0  # esquinas redondeadas del fondo del hueco de mano
 

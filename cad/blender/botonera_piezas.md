@@ -1,25 +1,29 @@
 # Botonera del guardavidas: piezas
 
 Lista de piezas del modelo `gavia_botonera.py`. Todas se compran hechas, no hace falta impresora
-3D. Las medidas son de piezas comerciales típicas (aprox., a validar con la pieza en mano). Los
-precios están a cotizar.
+3D. Las medidas son de piezas comerciales típicas (aprox., a validar con la pieza en mano). Precios de
+MercadoLibre del 30/10/26: unos $85.161 en total.
 
 ![La botonera](../../docs/renders/gavia_botonera_1_tres_cuartos.jpg)
 
-| Pieza | Qué buscar en MercadoLibre | Medida usada en el modelo | Precio |
+| Pieza | Qué comprar | Medida usada en el modelo | Precio |
 |---|---|---|---|
-| Caja | caja estanca IP65 ABS 200x120x75 | 200 x 120 x 75 mm, tapa con 4 tornillos | a cotizar |
-| Botón INCIDENTE REAL | pulsador 30 mm rojo normal abierto | agujero de 30 mm | a cotizar |
-| Botón FALSO POSITIVO | pulsador 30 mm gris o blanco normal abierto | agujero de 30 mm | a cotizar |
-| Aro protector | guarda protectora para pulsador 30 mm | 44 mm de diámetro, 9 mm de alto | a cotizar |
-| Pantalla | display OLED 1.3 pulgadas I2C SH1106 | ventana de 40 x 24 mm | a cotizar |
-| Placa | ESP32 USB-C (la misma del banco) | | a cotizar |
-| LED de estado | LED 5 mm con portaled metálico | agujero de 8 mm | a cotizar |
-| Buzzer | buzzer activo 5 V | agujero de 4 mm | a cotizar |
-| Prensacable | prensacable PG7 | agujero de unos 12,5 mm | a cotizar |
-| Cable | cable USB-C a USB-A 3 metros | 4 mm de diámetro | a cotizar |
-| Ventana | acrílico transparente 2 mm, un retazo | 44 x 28 mm, pegado por dentro | a cotizar |
-| Fijación | tornillos para madera de 4 mm | dos, por las orejas | a cotizar |
+| Caja | [Kalop IP65 de 170 x 120 x 75 mm](https://www.mercadolibre.com.ar/up/MLAU3866774031), la misma de los drones | El modelo usa 200 x 120 x 75 mm y pasa a 170 mm (pendiente) | $8.045 |
+| Botón INCIDENTE REAL | [Pulsador de 30 mm tipo arcade](https://www.mercadolibre.com.ar/up/MLAU5020679137), rojo | agujero de 30 mm | $3.749 |
+| Botón FALSO POSITIVO | El mismo, gris o blanco | agujero de 30 mm | $3.749 |
+| Aro protector | El bisel del pulsador arcade hace de aro | 44 mm de diámetro, 9 mm de alto | incluido |
+| Pantalla | [OLED 1,3" SH1106 I2C](https://www.mercadolibre.com.ar/up/MLAU245352701) | ventana de 40 x 24 mm | $8.400 |
+| Placa | ESP32 USB-C, el de repuesto del banco | | ya comprado en la fase 1 |
+| LED de estado | [Portaled metálico de 5 mm](https://www.mercadolibre.com.ar/up/MLAU289137012) (a validar cuántos trae) | agujero de 8 mm | $23.751 |
+| Buzzer | Uno del pack de cinco de la fase 3 | agujero de 4 mm | ya comprado |
+| Prensacable | [PG7, pack de 20](https://articulo.mercadolibre.com.ar/MLA-2126012616); los que sobran van a las cajas del dron | agujero de unos 12,5 mm | $20.677 |
+| Cable | [USB-C de 3 m](https://articulo.mercadolibre.com.ar/MLA-2012191232) | 4 mm de diámetro | $16.790 |
+| Ventana | Acrílico transparente de 2 mm, un retazo que se pide al taller láser | 44 x 28 mm, pegado por dentro | con el corte |
+| Fijación | Tornillos para madera de 4 mm, de ferretería | dos, por las orejas | |
+
+Los pulsadores arcade no son estancos: en la v1 la botonera va bajo el techo de la torre. Para la v2
+conviene un pulsador estanco, por ejemplo un
+[par de rasantes de 22 mm](https://articulo.mercadolibre.com.ar/MLA-2151149170) a $8.117.
 
 ## Cómo se arma
 

@@ -68,7 +68,8 @@ Hacen falta tres planchas de 1 x 1 m de 30 mm. Los tapones salen de los recortes
   el policarbonato de 1 mm) con el centro a 276 mm.
 - Huecos de mano de 110 mm de ancho, 30 mm de alto (la capa del medio entera) y 30 mm de
   profundidad, con el fondo redondeado.
-- Canal del carbono de 13,5 mm, sobre el cuadrado que une los centros de los cuatro motores.
+- Canal de 13,5 mm para el cuadrado que une los centros de los cuatro motores: caño de aluminio de
+  12,7 mm en el prototipo, tubo de carbono de 13 mm después.
 - Ventanas de 122 x 172 mm, desde 212,4 mm del centro.
 - Paredes mínimas: 16 mm entre un ducto y cada canto, 10,4 mm entre una ventana y el canal o el
   canto de afuera, 27,7 mm entre una ventana y un ducto, 33 mm entre un hueco de mano y un ducto,

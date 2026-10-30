@@ -72,6 +72,7 @@
   td.l { width: 6mm; font-weight: 700; }
   td code, p code, li code { font-family: inherit; font-weight: 600; }
   tr.total td { border-bottom: none; font-weight: 700; padding-top: 2.4mm; }
+  table.compacta td { padding-top: 1.15mm; padding-bottom: 1.15mm; }
   .camino th { border-bottom: 0.4mm solid var(--carbon); font-size: 10pt; }
   .camino td:first-child { color: var(--sec); width: 27mm; }
   .camino td { font-size: 9pt; }
@@ -115,8 +116,8 @@
   <p class="bajada">Qué conseguir, dónde pedirlo y cómo armarlo, fase por fase. Pensado para que
     lo podamos hacer entre los tres sin saber de antemano de drones ni de electrónica.</p>
   <figure><img src="img/01-banco.jpg" alt="Los tres armando el banco de pruebas en un garage"></figure>
-  <p class="version">Versión del 30/10/2026. Precios de MercadoLibre del 30/10/26, sin impuestos y
-    con el dólar MEP a $1.568. Cambian rápido: revisarlos antes de comprar. Las ilustraciones son
+  <p class="version">Versión del 30/10/2026, revisada para gastar menos. Precios de MercadoLibre y
+    TangoFPV del 30/10/26, sin impuestos y con el dólar MEP a $1.568. Cambian rápido: revisarlos antes de comprar. Las ilustraciones son
     imágenes de referencia, no fotos de pruebas. Los números del dron son aproximados hasta
     medirlos.</p>
 </div>
@@ -132,13 +133,15 @@
     <tr><th></th><th>Fase 1 · Banco</th><th>Fase 2 · Cuerpo</th><th>Fase 3 · Vuelo atado</th></tr>
     <tr><td>Qué decide</td><td>Si el motor empuja lo que dice el fabricante, cuánto suma el ducto y cuánto quitan las rejillas. Si el sensor distingue agua de mar de lluvia</td><td>Si el aro sostiene a un adulto agarrado de un costado sin darse vuelta, y si las cajas no entran agua</td><td>Si vuela estable atado, si el corte por agua apaga los motores y si se destraba con el imán</td></tr>
     <tr><td>Qué armamos</td><td>Un solo motor dentro de un ducto, sobre una balanza, en la mesa del garage</td><td>El cuerpo del aro en telgopor, con su forma final, probado en pileta con pesas</td><td>El dron completo: motores, cajas, electrónica, rejillas, piel y botonera</td></tr>
-    <tr><td>Cuánto cuesta</td><td>Unos $1.280.000 (USD 816)</td><td>Unos $103.000 (USD 66), más el corte</td><td>Unos $980.000 (USD 625), aprox.</td></tr>
+    <tr><td>Cuánto cuesta</td><td>Unos $1.343.000 (USD 857), más el corte láser</td><td>Unos $58.000 (USD 37), más el corte y la pileta</td><td>Unos $561.000 (USD 358), más el corte de las rejillas</td></tr>
     <tr><td>Cuánto tarda</td><td>2 semanas de envíos y 2 fines de semana (aprox.)</td><td>1 semana de taller y 1 fin de semana (aprox.)</td><td>1 a 2 meses (aprox.)</td></tr>
-    <tr><td>Pasamos si</td><td>Cada motor con ducto y rejillas empuja 1,7 kg o más</td><td>Un adulto se agarra del canto de adentro y el aro no se para de canto</td><td>Vuela atado 3 minutos sin sustos y el corte por agua funciona</td></tr>
+    <tr><td>Pasamos si</td><td>Cada motor con ducto y rejillas empuja unos 1,8 kg o más</td><td>Un adulto se agarra del canto de adentro y el aro no se para de canto</td><td>Vuela atado 3 minutos sin sustos y el corte por agua funciona</td></tr>
   </table>
-  <p class="nota">Todo junto da unos USD 1.507 sin impuestos ni lo que falta cotizar (los cortes,
-    la piel y la botonera). El plan anterior daba unos USD 2.012. La IA a bordo
-    (unos USD 370) queda para después del primer vuelo.</p>
+  <p class="nota">Con la botonera (unos $85.000, USD 54), todo junto da unos $2.047.000 (USD 1.305)
+    sin impuestos ni los servicios de corte y la pileta. Ahora suma cosas que antes no estaban
+    cotizadas: botonera, piel, pilas de la radio, tornillos, manguera y adaptador. Con la misma lista de
+    antes, la revisión de gastos bajó de USD 1.507 a USD 1.163. La IA a bordo (unos USD 370) queda para
+    después del primer vuelo.</p>
 
   <h3>Qué simplificamos y por qué</h3>
   <ul class="lista">
@@ -150,6 +153,8 @@
       mismo archivo de láser y las cajas son estancas de electricidad.</li>
     <li>La maqueta de pileta es el cuerpo del dron. Se corta una sola vez.</li>
     <li>El banco mide 3 configuraciones en vez de 5. El labio redondeado va de entrada.</li>
+    <li>Donde había algo igual de bueno y más barato, lo cambiamos, y sumamos dos repuestos baratos
+      para cuidar lo caro (ver "Gastar menos").</li>
   </ul>
 </div>
 
@@ -176,21 +181,20 @@
     de quien compra. Cómo cuenta MercadoLibre el límite (por compra o por paquete) está a validar.
     Sugerencia de reparto:</p>
   <table>
-    <tr><th>Compra importada</th><th>Fase</th><th>Quién</th></tr>
-    <tr><td>Motores Hobbywing, pack de 4</td><td>1</td><td>Lucho</td></tr>
-    <tr><td>ESC del banco</td><td>1</td><td>Eli</td></tr>
-    <tr><td>Controladora y ESC del dron</td><td>3</td><td>Augus</td></tr>
-    <tr><td>GPS</td><td>3</td><td>Lucho</td></tr>
-    <tr><td>Radio y receptor</td><td>3</td><td>Eli</td></tr>
+    <tr><th>Quién</th><th>Fase 1</th><th>Fase 3</th></tr>
+    <tr><td>Lucho</td><td>Motores Hobbywing, pack de 4</td><td>GPS y placa de distribución</td></tr>
+    <tr><td>Eli</td><td>ESC del banco y la radio</td><td>Tres ESC más para el dron</td></tr>
+    <tr><td>Augus</td><td>Wattímetro y cargador</td><td>Controladora</td></tr>
   </table>
-  <p class="nota">Después vemos entre los tres cómo se financia cada compra. El reparto es solo
-    para no gastar el cupo de uno.</p>
+  <p class="nota">Cada uno usa 3 de sus 5 envíos del año. Después vemos entre los tres cómo se
+    financia cada compra. El reparto es solo para no gastar el cupo de uno.</p>
 
-  <h3>Preguntas para el vendedor</h3>
+  <h3>Preguntas antes de comprar</h3>
   <div class="mensaje">
-    <p>Para los motores: "Hola, ¿son Hobbywing XRotor 2812 900KV originales? ¿El pack trae 4
-      motores con sus tornillos? Gracias."</p>
-    <p>Para la batería: "Hola, ¿cuánto pesa la batería y qué ficha trae (XT60 o XT90)? Gracias."</p>
+    <p>Al vendedor de los motores: "Hola, ¿son Hobbywing XRotor 2812 900KV originales? ¿El pack
+      trae 4 motores con sus tornillos? Gracias."</p>
+    <p>A TangoFPV, por la batería: "Hola, ¿cuánto sale el envío de la CNHL 6S 4000 mAh 65C a
+      [localidad] y en cuántos días llega? Gracias."</p>
   </div>
 
   <div class="cuidado">
@@ -202,6 +206,69 @@
   </div>
 </div>
 
+<!-- GASTAR MENOS -->
+<div class="hoja">
+  <h2>Gastar menos</h2>
+  <p class="intro">Revisamos cada compra con dos preguntas: ¿hay algo igual de bueno y más barato?
+    ¿Y qué pasa si lo rompemos? Bajamos unos $540.000 (USD&nbsp;344, un 23&nbsp;%) y sumamos dos repuestos
+    baratos que cuidan lo caro.</p>
+  <table>
+    <tr><th>Qué</th><th>Antes</th><th>Ahora</th><th class="n">Ahorro</th></tr>
+    <tr><td>Cargador</td><td>B6AC local, $219.990</td><td>El mismo modelo (B6AC V3) importado, $111.021</td><td class="n">$108.969</td></tr>
+    <tr><td>Batería</td><td>Pulse 6S 5200 80C, $270.000</td><td>CNHL 6S 4000 65C en TangoFPV, $191.400. Pesa unos 650 g, más cerca del modelo</td><td class="n">$78.600</td></tr>
+    <tr><td>Wattímetro</td><td>Local, $79.000</td><td>Importado, $23.918</td><td class="n">$55.082</td></tr>
+    <tr><td>Multímetro</td><td>Uni-T UT89XD, $37.900</td><td>Uni-T UT33D+, $20.900. Mide lo mismo que usamos</td><td class="n">$17.000</td></tr>
+    <tr><td>Pesas de la pileta</td><td>Lastre de buceo, $45.717</td><td>Discos de mancuerna de hierro o bolsas de tuercas, de casa</td><td class="n">$45.717</td></tr>
+    <tr><td>Controladora</td><td>Matek H743-WING, $275.210</td><td>MicoAir743, $127.215, también con soporte de ArduPilot</td><td class="n">$147.995</td></tr>
+    <tr><td>Receptor</td><td>Radiomaster RP3, $86.355</td><td>Radiomaster XR2 en TangoFPV, $43.065</td><td class="n">$43.290</td></tr>
+    <tr><td>Cuadrado del dron</td><td>Tubo de carbono, $96.000</td><td>Caño de aluminio de 12,7 mm, 3 m, $29.496</td><td class="n">$66.504</td></tr>
+    <tr><td>Sumamos</td><td></td><td>Probador de LiPo con alarma ($5.597), un ESP32 de repuesto ($15.990) y fichas EC5</td><td class="n">−$23.484</td></tr>
+    <tr class="total"><td>Total</td><td>$2.362.993</td><td>$1.823.320</td><td class="n">$539.673</td></tr>
+  </table>
+  <p class="nota">Es la misma lista de antes, para comparar. Con lo que faltaba cotizar (botonera,
+    piel, pilas, tornillos, manguera y adaptador), el total completo es de unos $2.047.000 (USD 1.305).</p>
+
+  <h3>Lo que ya tengamos no se compra</h3>
+  <p>Soldador, multímetro, estaño, sargentos y anteojos: si alguno de los tres ya los tiene o se los
+    pueden prestar, es plata que no sale. Entre todo son unos $205.000 (USD 131) más.</p>
+
+  <h3>Dónde comprar</h3>
+  <p>MercadoLibre primero, por la compra protegida: si algo llega roto o trucho, se devuelve. Afuera
+    solo cuando ahorra mucho o no está: <a href="https://tangofpv.com/">TangoFPV</a> (Córdoba) tiene la
+    batería y el receptor más baratos. <a href="https://www.fpvstore.ar/">fpvstore.ar</a> no tiene 6S
+    ni hélices de 8 pulgadas, y en Instagram no encontramos tiendas con precios. Afuera, mejor con
+    tarjeta.</p>
+
+  <h3>En qué no ahorramos</h3>
+  <ul class="lista">
+    <li>Las hélices: van los tres packs, porque son lo que más se rompe y casi no hay.</li>
+    <li>La bolsa ignífuga (en la más barata no entra la batería) y la celda de 10 kg.</li>
+    <li>El soldador T12: uno barato no llega a calentar una ficha de batería y la soldadura queda
+      fría, que es como se queman los ESC.</li>
+  </ul>
+</div>
+
+<!-- SI SE ROMPE -->
+<div class="hoja">
+  <h2>Si se rompe o se quema algo</h2>
+  <p class="intro">Somos nuevos en esto y algo se va a romper. Lo importante es que sea lo barato y
+    que tengamos con qué reemplazarlo. Casi todo se evita con pasos que no cuestan nada.</p>
+  <table>
+    <tr><th>Qué</th><th>Cómo se rompe</th><th>Cómo lo evitamos</th><th>Si pasa igual</th></tr>
+    <tr><td>Batería</td><td>Descargarla de más, cargarla mal o pincharla</td><td>Probador con alarma siempre enchufado al cable de balanceo, en 3,5 V por celda. Se carga en modo LiPo balance, 6S, adentro de la bolsa. Si no se usa en unos días, se deja en el modo de guardado del cargador</td><td>Plan B: la Pulse, $270.000</td></tr>
+    <tr><td>ESC</td><td>Un corto en una soldadura, o el cable rojo de 5 V conectado al ESP32</td><td>Multímetro en continuidad entre el + y el − antes de enchufar algo recién soldado: si pita, hay un corto. El cable rojo no se conecta</td><td>Otro igual, $53.168. Con ESC sueltos se cambia uno solo</td></tr>
+    <tr><td>Motor</td><td>Mucho tiempo a fondo, o la hélice rozando el tubo</td><td>Ningún paso a fondo dura más de 10 s. Entre configuraciones se toca el motor: si quema, se espera. La hélice se gira a mano adentro del tubo antes de dar potencia. Tornillos de 8 mm, nunca más largos</td><td>Falta uno para el dron. Un pack nuevo sale $127.997</td></tr>
+    <tr><td>Hélice</td><td>Un roce con el tubo o un golpe contra el piso</td><td>Lo mismo que el motor, y en el vuelo atado, soga corta</td><td>Quedan dos de repuesto. El pack de 2 sale $49.501</td></tr>
+    <tr><td>ESP32</td><td>Que le llegue la batería a un pin</td><td>Potencia y datos separados, como en el diagrama del banco</td><td>El de repuesto, que después va a la botonera</td></tr>
+    <tr><td>Celda de carga</td><td>Apretarla de más o golpearla</td><td>Atornillarla solo por las puntas, sin que la plataforma la toque en otro lado</td><td>Otra, $16.795</td></tr>
+    <tr><td>Ducto o rejilla</td><td>Mal enrollado o una rejilla partida</td><td>Probar en seco antes de pegar</td><td>Sobra policarbonato para ocho tiras más, y la rejilla se vuelve a cortar</td></tr>
+    <tr><td>Cuerpo de telgopor</td><td>Una pared fina que se parte al cortar o al lijar</td><td>Lijar despacio cerca de los huecos de mano</td><td>Se pega con el mismo adhesivo. Si no, el taller corta esa capa sola</td></tr>
+    <tr><td>Cuadrado de aluminio</td><td>Un agujero mal hecho o un golpe</td><td>Medir dos veces antes de agujerear</td><td>El aluminio se dobla y se endereza. Otro metro sale $9.832</td></tr>
+  </table>
+  <p class="nota">Lo único que no tiene reemplazo barato es la batería. Por eso el probador con
+    alarma y la bolsa van desde el primer día.</p>
+</div>
+
 
 <!-- SI ALGO NO ESTÁ -->
 <div class="hoja">
@@ -210,16 +277,39 @@
     Cada pieza crítica tiene un plan B.</p>
   <table>
     <tr><th>Pieza</th><th>Qué puede pasar</th><th>Plan A</th><th>Plan B</th></tr>
-    <tr><td>Batería</td><td>Hay una sola publicación local que sirve (5 disponibles el 30/10)</td><td>Pulse 6S 5200 80C, $270.000. Comprarla en la primera tanda</td><td>Ovonic 6S 5000 130C con XT90, $459.124, importada (usa un cupo)</td></tr>
+    <tr><td>Batería</td><td>En MercadoLibre hay una sola publicación local que sirve. TangoFPV tenía stock el 30/10</td><td>CNHL 6S 4000 65C con EC5, $191.400, en TangoFPV. Comprarla en la primera tanda</td><td>Pulse 6S 5200 80C, $270.000, en MercadoLibre (la ficha puede ser otra)</td></tr>
+    <tr><td>Cargador</td><td>El importado tarda unas tres semanas o llega fallado</td><td>B6AC V3 importado, $111.021</td><td>El mismo modelo local, $219.990</td></tr>
+    <tr><td>Wattímetro</td><td>Lo mismo que el cargador</td><td>Importado, $23.918</td><td>Local, $79.000</td></tr>
     <tr><td>Hélices</td><td>Casi no hay de 8 pulgadas tripala de marca y tardan una semana</td><td>Los 3 packs de Gemfan 8046 juntos, en la fase 1</td><td>Traer Gemfan o HQ 8x4.5x3 junto con los motores</td></tr>
     <tr><td>Motores</td><td>El vendedor no es tienda oficial</td><td>Pack de 4 Hobbywing. La configuración a del banco dice si son originales</td><td>Devolverlos con la compra protegida de MercadoLibre y probar otro vendedor</td></tr>
     <tr><td>Celda de carga</td><td>Nada, hay varias</td><td>Celda de 10 kg con HX711, $16.795</td><td>Otra igual, $16.479</td></tr>
-    <tr><td>Controladora</td><td>No hay stack SpeedyBee original, solo genéricos</td><td>Se elige después del banco</td><td>Matek H743-WING, con soporte de ArduPilot y en MercadoLibre</td></tr>
+    <tr><td>Controladora</td><td>No hay stack SpeedyBee original, solo genéricos</td><td>MicoAir743 con cuatro ESC sueltos, $127.215. Se confirma después del banco</td><td>Matek H743-WING, $275.210, también con soporte de ArduPilot</td></tr>
+    <tr><td>Receptor</td><td>TangoFPV se queda sin stock</td><td>Radiomaster XR2, $43.065</td><td>Radiomaster RP1 o RP3 en MercadoLibre, unos $88.000</td></tr>
     <tr><td>Cajas estancas</td><td>No hay IP67 de menos de 90 mm de alto</td><td>Kalop IP65 de 120 x 170 x 75 mm</td><td>Si no pasan la prueba de la pileta, otra caja y se regeneran las capas del cuerpo</td></tr>
     <tr><td>Talleres</td><td>No publican precios</td><td>Mandar los mensajes de este PDF a dos o tres talleres de cada tipo, apenas arrancamos</td><td>Otro taller de la lista</td></tr>
   </table>
   <p class="nota">Pedir presupuesto es gratis y no compromete. Conviene hacerlo antes de comprar nada,
     así sabemos el costo completo de cada fase.</p>
+</div>
+
+<!-- PROVEEDORES -->
+<div class="hoja">
+  <h2>Proveedores y servicios</h2>
+  <p class="intro">Lo que no se compra con un clic: dónde pedirlo, qué precio sirve de referencia y qué
+    preguntar. Ninguno publica precio cerrado, así que se pide presupuesto a dos o tres.</p>
+  <table>
+    <tr><th>Qué</th><th>Dónde</th><th>Referencia</th><th>Qué preguntar</th></tr>
+    <tr><td>Corte láser del banco</td><td>Talleres en MercadoLibre: <a href="https://servicio.mercadolibre.com.ar/MLA-3214912144-servicio-corte-laser-co2-mdf-acrilico-madera-goma-grabados-_JM">Almirante Brown</a>, <a href="https://articulo.mercadolibre.com.ar/MLA-3355709130">zona oeste</a> y <a href="https://articulo.mercadolibre.com.ar/MLA-1805504129">CABA</a></td><td>Acrílico de 6 mm de 60 x 40, $52.844 la plancha</td><td>El mensaje de la fase 1, con material incluido</td></tr>
+    <tr><td>Rejillas del dron</td><td>El mismo taller del banco</td><td>Acrílico de 6 mm de 120 x 60, $116.600: salen 10 discos, 8 y 2 de repuesto</td><td>Cortar las 8 juntas y sumar un retazo de acrílico de 2 mm para la ventana de la botonera</td></tr>
+    <tr><td>Corte del telgopor</td><td><a href="https://www.instagram.com/telgoporquilmes/">Telgopor Quilmes</a>, <a href="https://deletrearte.com.ar/Servicios/">Deletrearte</a> y <a href="https://rotularte.com.ar/producto/corte-cnc-por-hora-servicio-para-grafica-y-carteleria/">RotulArte</a></td><td>CNC desde $61.440 la hora (RotulArte). Plancha de EPS de 30 mm, $14.187</td><td>El mensaje de la fase 2. Plan B: cortador de hilo caliente de mano, $51.990, con la plantilla impresa</td></tr>
+    <tr><td>Pileta</td><td>Clubes de la zona, por ejemplo Pejerrey Club (Quilmes)</td><td>$12.500 la entrada para no socios y $2.500 de revisión médica (sin fecha, a validar)</td><td>Si la pileta es techada o climatizada, y si nos dejan meter el aro con pesas una hora</td></tr>
+    <tr><td>Batería y receptor</td><td><a href="https://tangofpv.com/">TangoFPV</a> (Córdoba)</td><td>$191.400 y $43.065</td><td>Costo y tiempo del envío</td></tr>
+    <tr><td>Piel para el mar</td><td>Talleres de tablas de surf (no encontramos uno con web: buscar "shaper" en Instagram o en Mar del Plata)</td><td>Hacerlo nosotros: tela de vidrio de 200 g ($21.978 el m²) y resina epoxi ($58.626 el kg)</td><td>Si laminan con epoxi sobre telgopor y cuánto sale un aro de 80 cm</td></tr>
+    <tr><td>Lo chico</td><td>Ferretería del barrio</td><td>Manguera, cola vinílica, cinta y tornillos sueltos suelen salir menos que en MercadoLibre</td><td></td></tr>
+  </table>
+  <p class="nota">Para más adelante: la estación todo en uno de la v2 lleva una Raspberry Pi 5 de 8 GB
+    ($431.308) con el kit de IA Hailo de 13 TOPS ($215.559), los dos en MercadoLibre. No se compran
+    ahora.</p>
 </div>
 
 <!-- FASE 1 -->
@@ -230,35 +320,43 @@
     el sensor que corta los motores en el agua.</p>
 
   <h3>Qué conseguir</h3>
-  <table>
+  <table class="compacta">
     <tr><th>Qué</th><th>Qué poner en el buscador</th><th class="n">Precio</th><th class="o">Origen</th></tr>
     <tr><td>Soldador</td><td>estación soldador T12 G Tools 72W</td><td class="n">$95.101</td><td class="o">Local</td></tr>
     <tr><td>Estaño</td><td>estaño 63/37 0.8 mm con flux</td><td class="n">$10.500</td><td class="o">Local</td></tr>
-    <tr><td>Multímetro</td><td>multímetro Uni-T UT89XD</td><td class="n">$37.900</td><td class="o">Local</td></tr>
+    <tr><td>Multímetro</td><td>multímetro Uni-T UT33D+</td><td class="n">$20.900</td><td class="o">Local</td></tr>
     <tr><td>Cable grueso</td><td>cable silicona 12 AWG rojo negro</td><td class="n">$29.900</td><td class="o">Local</td></tr>
     <tr><td>Termocontraíble</td><td>kit termocontraíble 560 piezas</td><td class="n">$15.200</td><td class="o">Local</td></tr>
     <tr><td>Anteojos, x3</td><td>anteojos de seguridad Libus</td><td class="n">$10.340</td><td class="o">Local</td></tr>
+    <tr><td>Tornillos</td><td>kit tornillos Allen M3 y M4 240 unidades</td><td class="n">$26.999</td><td class="o">Local</td></tr>
     <tr><td>Motores, pack de 4</td><td>Hobbywing XRotor 2812 900KV 4 unidades</td><td class="n">$127.997</td><td class="o">China</td></tr>
     <tr><td>Hélices, 3 packs de 2</td><td>Gemfan 8046 tripala</td><td class="n">$148.503</td><td class="o">Local</td></tr>
     <tr><td>ESC</td><td>ESC EMAX BLHeli 60A 2-6S</td><td class="n">$53.168</td><td class="o">China</td></tr>
-    <tr><td>Batería</td><td>LiPo Pulse 6S 5200 mAh 80C</td><td class="n">$270.000</td><td class="o">Local</td></tr>
-    <tr><td>Cargador con fuente</td><td>cargador Imax B6AC con fuente</td><td class="n">$219.990</td><td class="o">Local</td></tr>
-    <tr><td>Wattímetro</td><td>wattímetro 150A</td><td class="n">$79.000</td><td class="o">Local</td></tr>
-    <tr><td>Fichas, 2 pares</td><td>fichas XT90 macho hembra (o XT60 si la batería trae XT60)</td><td class="n">$22.063</td><td class="o">Local</td></tr>
+    <tr><td>Batería</td><td>CNHL 6S 4000mAh 65C EC5, en tangofpv.com</td><td class="n">$191.400</td><td class="o">TangoFPV</td></tr>
+    <tr><td>Cargador con fuente</td><td>cargador Imax B6AC V3 80W</td><td class="n">$111.021</td><td class="o">China</td></tr>
+    <tr><td>Adaptador de enchufe</td><td>adaptador enchufe europeo patas argentina</td><td class="n">$6.756</td><td class="o">Local</td></tr>
+    <tr><td>Wattímetro</td><td>medidor de potencia digital 150A</td><td class="n">$23.918</td><td class="o">China</td></tr>
+    <tr><td>Fichas, 4 pares</td><td>fichas EC5 macho hembra</td><td class="n">$23.960</td><td class="o">Local</td></tr>
+    <tr><td>Probador de LiPo</td><td>tester baterías litio 1s a 8s con alarma</td><td class="n">$5.597</td><td class="o">Local</td></tr>
     <tr><td>Celda de carga</td><td>celda de carga 10 kg HX711</td><td class="n">$16.795</td><td class="o">Local</td></tr>
-    <tr><td>Placa ESP32</td><td>ESP32 USB-C NodeMCU</td><td class="n">$15.990</td><td class="o">Local</td></tr>
+    <tr><td>Placa ESP32, x2</td><td>ESP32 USB-C NodeMCU</td><td class="n">$31.980</td><td class="o">Local</td></tr>
+    <tr><td>Radio</td><td>Radiomaster Pocket ELRS</td><td class="n">$201.977</td><td class="o">Internac.</td></tr>
+    <tr><td>Pilas de la radio, x2</td><td>pila recargable Samsung 18650 30Q</td><td class="n">$39.000</td><td class="o">Local</td></tr>
     <tr><td>Bolsa ignífuga</td><td>bolsa ignífuga lipo 29x23</td><td class="n">$37.991</td><td class="o">Local</td></tr>
     <tr><td>Policarbonato</td><td>policarbonato compacto 1 mm 1,2 x 1,2</td><td class="n">$47.033</td><td class="o">Local</td></tr>
+    <tr><td>Manguera del labio</td><td>manguera cristal 3/4 (5 m, o 70 cm en ferretería)</td><td class="n">$25.000</td><td class="o">Local</td></tr>
     <tr><td>Sargentos, x2</td><td>sargento Wadfow 300 mm</td><td class="n">$22.800</td><td class="o">Local</td></tr>
     <tr><td>Sensor de agua</td><td>módulo LM393 sensor de lluvia con sonda</td><td class="n">$5.604</td><td class="o">Local</td></tr>
     <tr><td>Electrodos</td><td>varilla roscada inoxidable 316 1/4</td><td class="n">$13.750</td><td class="o">Local</td></tr>
-    <tr class="total"><td>Total</td><td>Sin el corte láser ni la manguera</td><td class="n">$1.279.625</td><td></td></tr>
+    <tr class="total"><td>Total</td><td>Sin el corte láser</td><td class="n">$1.343.190</td><td></td></tr>
   </table>
-  <p class="nota">Las hélices se compran todas juntas: un pack para el banco y dos para el dron, porque
-    casi no hay de 8 pulgadas tripala y tardan una semana en llegar. La plancha de policarbonato
-    alcanza para el ducto del banco y para los cuatro ductos del dron. La celda pasa de 5 a 10 kg porque con el banco encima la de 5 kg queda justa
-    (aprox., a validar). La manguera para el labio (unos 20 mm de diámetro, 70 cm) se consigue en
-    cualquier ferretería.</p>
+  <p class="nota">Lo que alguien ya tenga (soldador, estaño, multímetro, sargentos, anteojos) no se
+    compra. Las hélices van todas juntas: un pack para el banco y dos para el dron, porque casi no hay
+    de 8 pulgadas tripala y tardan una semana. La batería trae ficha EC5, así que todo el proyecto usa
+    EC5. El cargador importado trae enchufe europeo y va con un adaptador a enchufe argentino. El
+    segundo ESP32 es de repuesto y después va a la botonera. La radio se adelanta para practicar en un
+    simulador en la PC (se enchufa por USB) y llegar al vuelo atado sabiendo manejar. La plancha de
+    policarbonato alcanza para el ducto del banco, los cuatro del dron y varios intentos más.</p>
 </div>
 
 <div class="hoja">
@@ -292,9 +390,9 @@
   <div class="par">
     <div>
       <ol class="pasos">
-        <li>Con el multímetro y el soldador, armar los cables: fichas en el wattímetro, en el ESC y
-          en el cable de la batería. Primero se estaña cada punta, después se juntan y se cubren
-          con termocontraíble.</li>
+        <li>Practicar dos o tres soldaduras en un pedazo de cable. Después armar los cables: fichas
+          EC5 en el wattímetro, en el ESC y en el cable de carga. Primero se estaña cada punta,
+          después se juntan y se cubren con termocontraíble.</li>
         <li>Pegar las patas a la base con cola vinílica y atornillar la celda a la base por la punta
           fija, con dos separadores en el medio. La flecha de la celda mira hacia abajo.</li>
         <li>Atornillar la plataforma a la otra punta de la celda, con los otros dos separadores. La
@@ -334,8 +432,9 @@
   <ol class="pasos" style="counter-reset: paso 9">
     <li>Calzar las dos rejillas adentro del tubo, una abajo y otra arriba, cada una con tres puntos
       de cinta. Calzar la manguera cortada a lo largo en el borde de abajo: ese es el labio.</li>
-    <li>Poner la hélice y fijar la base a la mesa con los dos sargentos. Mesa pesada, lejos de la
-      pared.</li>
+    <li>Fijar la base a la mesa con los dos sargentos, en una mesa pesada y lejos de la pared.
+      Probar el motor sin hélice: tiene que girar suave. Después poner la hélice y girarla a mano
+      adentro del tubo: no puede rozar.</li>
   </ol>
 </div>
 
@@ -367,7 +466,7 @@
         <line x1="440" y1="49" x2="490" y2="49"/><line x1="440" y1="58" x2="490" y2="58"/><line x1="440" y1="67" x2="490" y2="67"/>
       </g>
       <g font-size="8.6" fill="#5C534A" text-anchor="middle">
-        <text x="145" y="22">XT90 o XT60</text><text x="305" y="22">XT90 o XT60</text><text x="465" y="22">3 cables</text>
+        <text x="145" y="22">EC5</text><text x="305" y="22">EC5</text><text x="465" y="22">3 cables</text>
       </g>
       <!-- datos -->
       <g font-size="10.5" fill="#1F1F1F">
@@ -403,6 +502,8 @@
     </svg>
   </div>
   <ul class="lista">
+    <li>La primera vez que se enchufa algo recién soldado, poner el multímetro en continuidad entre
+      el + y el − del lado del ESC. Si pita, hay un corto y no se enchufa la batería.</li>
     <li>Del ESC al ESP32 van solo el cable de señal y la masa. Si el ESC trae un cable rojo de 5 V,
       no se conecta: el ESP32 ya toma corriente del USB.</li>
     <li>La celda trae cuatro cables (casi siempre rojo, negro, verde y blanco) que van a E+, E−, A+
@@ -413,13 +514,17 @@
 
   <h3>Cómo se mide</h3>
   <p>Tres configuraciones con el mismo motor y la misma hélice. En cada una, el ESP32 sube el
-    acelerador de a pasos del 30 al 100 % y anota empuje, volts y amperes en un archivo.</p>
+    acelerador de a pasos del 30 al 100 % y anota el empuje en un archivo. Los volts y los amperes
+    los muestra el wattímetro: se filma con el celular durante el barrido.</p>
   <table>
     <tr><th></th><th>Configuración</th><th>Qué nos dice</th></tr>
     <tr><td class="l">a</td><td>Hélice libre, sin el tubo</td><td>Si el motor empuja lo que dice Hobbywing (2.771 g al 100 % según su <a href="https://www.hobbywing.com/en/uploads/file/20250207/0476a125d1bfffb4de7049354738a459.pdf">tabla</a>). Si da mucho menos, el motor no es original</td></tr>
     <tr><td class="l">b</td><td>Con el tubo y el labio</td><td>Cuánto suma el ducto</td></tr>
     <tr><td class="l">c</td><td>Tubo, labio y las dos rejillas</td><td>Cuánto quitan las rejillas. Es el número que importa</td></tr>
   </table>
+  <p class="nota">El probador de LiPo va siempre enchufado al cable de balanceo, con la alarma en
+    3,5 V por celda: si pita, se corta. Entre una configuración y otra se toca el motor, y si no se
+    aguanta el dedo, se espera a que se enfríe.</p>
 </div>
 
 <div class="hoja">
@@ -443,10 +548,11 @@
     el umbral ya medido.</p>
 
   <div class="regla">
-    <p><strong>Pasamos a la fase 2 si</strong> cada motor, con ducto, labio y rejillas, empuja 1,7 kg
-      o más al 100 %. Es el doble del peso del dron repartido en cuatro (3,4 kg, aprox.). Si la
-      batería pesa más que los 480 g del modelo, se suma la diferencia. Si no llega, antes de
-      comprar nada más probamos con un motor más grande o le sacamos peso al diseño.</p>
+    <p><strong>Pasamos a la fase 2 si</strong> cada motor, con ducto, labio y rejillas, empuja unos
+      1,8 kg o más al 100 %. Es el doble del peso del dron repartido en cuatro. El modelo da 3,4 kg, y
+      la batería (unos 650 g contra 480 g) y el aluminio le suman unos 0,2 kg (aprox., a validar al
+      pesar todo). Si no llega, antes de comprar nada más probamos con un motor más grande o le
+      sacamos peso al diseño.</p>
   </div>
 </div>
 
@@ -465,15 +571,17 @@
     <tr><td>Corte de las 3 capas, con material</td><td>Taller de telgopor o router CNC (ver abajo)</td><td class="n">a cotizar</td></tr>
     <tr><td>Pegamento, x2</td><td>Novolastic adhesivo para telgopor</td><td class="n">$21.091</td></tr>
     <tr><td>Dinamómetro</td><td>balanza colgante digital 50 kg</td><td class="n">$20.500</td></tr>
-    <tr><td>Pesas, x3</td><td>lastre buceo forrado 1 kg</td><td class="n">$45.717 (aprox.)</td></tr>
+    <tr><td>Pesas, unos 3 kg</td><td>Discos de mancuerna de hierro o bolsas de tuercas, de casa</td><td class="n">$0</td></tr>
     <tr><td>Cajas estancas, x2</td><td>caja de paso estanca 120x170x75 IP65 Kalop</td><td class="n">$16.022</td></tr>
-    <tr><td>Entrada a la pileta</td><td>Pileta techada (las descubiertas abren en diciembre)</td><td class="n">a cotizar</td></tr>
-    <tr class="total"><td>Total</td><td>Sin el corte ni la pileta</td><td class="n">$103.330</td></tr>
+    <tr><td>Entrada a la pileta</td><td>Pileta techada (las descubiertas abren en diciembre). Ver "Proveedores y servicios"</td><td class="n">a cotizar</td></tr>
+    <tr class="total"><td>Total</td><td>Sin el corte ni la pileta</td><td class="n">$57.613</td></tr>
   </table>
-  <p class="nota">Las pesas: la publicación cotizada da $30.478 por dos. El cuerpo pesa unos 0,65 kg y
-    el dron unos 3,4 kg, así que faltan unos 2,75 kg de lastre más la diferencia de la batería
-    (aprox., a validar). Los cuatro tubos de los ductos salen de la plancha de policarbonato de la
-    fase 1.</p>
+  <p class="nota">Las pesas: el cuerpo pesa unos 0,65 kg y el dron unos 3,6 kg, así que faltan unos
+    2,95 kg de lastre (aprox., a validar). Tienen que ser de hierro o de plomo, porque bajo el agua
+    pierden poco peso. Las de plástico con cemento pierden casi la mitad y falsean la prueba. Si nadie
+    tiene, lastre de buceo Cressi, $30.478 los dos de 1 kg. Si el taller no pone el telgopor, son tres
+    planchas de 1 x 1 m de 30 mm y 30 kg/m³, a $14.187 cada una. Los cuatro tubos de los ductos salen
+    de la plancha de policarbonato de la fase 1.</p>
 </div>
 
 <div class="hoja">
@@ -550,33 +658,40 @@
   <figure class="grande corta"><img src="img/09-electronica.jpg" alt="Los tres instalando la electrónica en el aro"><figcaption>Imagen ilustrativa.</figcaption></figure>
 
   <h3>Qué conseguir</h3>
-  <table>
+  <table class="compacta">
     <tr><th>Qué</th><th>Qué poner en el buscador</th><th class="n">Precio</th><th class="o">Origen</th></tr>
-    <tr><td>Controladora y ESC</td><td>Se elige al terminar el banco: un stack con ESC 4 en 1 de 6S y 55 A o más por canal, con soporte oficial de ArduPilot. Plan B: Matek H743-WING V3, 3 ESC EMAX 60A y placa Matek FCHUB-12S</td><td class="n">$501.106 (plan B)</td><td class="o">China</td></tr>
+    <tr><td>Controladora</td><td>controladora MicoAir743 (se confirma al terminar el banco)</td><td class="n">$127.215</td><td class="o">China</td></tr>
+    <tr><td>ESC, x3 más</td><td>ESC EMAX BLHeli 60A 2-6S (el cuarto es el del banco)</td><td class="n">$159.504</td><td class="o">China</td></tr>
+    <tr><td>Placa de distribución</td><td>Matek FCHUB-12S, con sensor de corriente</td><td class="n">$66.392</td><td class="o">China</td></tr>
     <tr><td>GPS</td><td>GPS MicoAir M10G-5883</td><td class="n">$69.906</td><td class="o">China</td></tr>
-    <tr><td>Radio</td><td>Radiomaster Pocket ELRS</td><td class="n">$201.977</td><td class="o">Internac.</td></tr>
-    <tr><td>Receptor</td><td>Radiomaster RP3 ELRS 2.4</td><td class="n">$86.355</td><td class="o">Internac.</td></tr>
-    <tr><td>Tubo de carbono</td><td>tubo carbono 13x10x1000</td><td class="n">$96.000</td><td class="o">Local</td></tr>
+    <tr><td>Receptor</td><td>Radiomaster XR2 Nano ELRS, en tangofpv.com</td><td class="n">$43.065</td><td class="o">TangoFPV</td></tr>
+    <tr><td>Caño de aluminio, 3&nbsp;m</td><td>caño redondo aluminio 12,7 x 1 mm x 1 m</td><td class="n">$29.496</td><td class="o">Local</td></tr>
     <tr><td>Buzzer</td><td>buzzer activo 5V</td><td class="n">$6.519</td><td class="o">Local</td></tr>
     <tr><td>Bloqueo por agua</td><td>relé biestable 5V, reed switch NA, imán neodimio 10x3</td><td class="n">$18.175</td><td class="o">Local</td></tr>
-    <tr><td>Rejillas del dron, x8</td><td>Mismo archivo de láser que el banco, en acrílico de 6 mm</td><td class="n">a cotizar</td><td class="o">Taller</td></tr>
-    <tr><td>Piel</td><td>Taller de tablas de surf (laminado epoxi sobre EPS) o membrana acrílica a pincel</td><td class="n">a cotizar</td><td class="o">Taller</td></tr>
-    <tr class="total"><td>Total</td><td>Con el plan B, sin rejillas, piel ni botonera</td><td class="n">$980.038</td><td></td></tr>
+    <tr><td>Sellador</td><td>Poxipol 10 minutos 14 ml</td><td class="n">$7.449</td><td class="o">Local</td></tr>
+    <tr><td>Piel</td><td>membrana líquida acrílica 4 L (al agua, no ataca el telgopor)</td><td class="n">$32.900</td><td class="o">Local</td></tr>
+    <tr><td>Rejillas del dron, x8</td><td>Mismo archivo de láser que el banco. Una plancha de acrílico de 6 mm de 120 x 60 da 10 discos</td><td class="n">a cotizar</td><td class="o">Taller</td></tr>
+    <tr class="total"><td>Total</td><td>Sin el corte de las rejillas</td><td class="n">$560.621</td><td></td></tr>
   </table>
-  <p class="nota">Nunca resina poliéster sobre el telgopor: lo derrite. Los liners salen de la plancha
-    de policarbonato de la fase 1. Plan B de controladora más barato: MicoAir743 a $127.216, también
-    con soporte de ArduPilot.</p>
+  <p class="nota">Con ESC sueltos, si se quema uno se cambia uno ($53.168) y no la placa entera, y el
+    del banco ya es el cuarto. Si al terminar el banco aparece un stack de marca con ESC 4 en 1, se
+    puede elegir ese. Plan B de controladora: Matek H743-WING, $275.210. El aluminio sale un tercio
+    del carbono, pesa unos 20 g más y es más blando (aprox., a validar). Si el dron vibra, se cambia
+    por carbono ($96.000 el metro). La piel de membrana alcanza para la pileta y el campo. Para el mar,
+    epoxi con tela de vidrio ($102.582 en materiales) o un taller de tablas de surf. Nunca resina
+    poliéster sobre el telgopor: lo derrite. Los liners salen de la plancha de policarbonato de la
+    fase 1.</p>
 </div>
 
 <div class="hoja">
   <h3 style="margin-top:0">Armado, en orden</h3>
   <ol class="pasos">
     <li>Meter los cuatro liners de policarbonato en los ductos del cuerpo y pegarlos.</li>
-    <li>Pasar el cuadrado de carbono por el canal de la capa del medio. Cada motor va en un puente
-      de dos listones, como en el banco, porque el tubo no entra por debajo del motor.</li>
+    <li>Pasar el cuadrado de caño de aluminio por el canal de la capa del medio. Cada motor va en un
+      puente de dos listones, como en el banco, porque el caño no entra por debajo del motor.</li>
     <li>Atornillar los motores, pasar los cables por las ventanas de las cajas y sellar los pasos
       con epoxi.</li>
-    <li>Batería y ESC en una caja, controladora, receptor y GPS en la otra.</li>
+    <li>Batería, ESC y placa de distribución en una caja, controladora, receptor y GPS en la otra.</li>
     <li>Armar el bloqueo por agua con el umbral que medimos en la fase 1 y probarlo 50 veces con el
       imán.</li>
     <li>Configurar ArduPilot desde la laptop y probar todo sin hélices.</li>
@@ -618,20 +733,25 @@
         y es el dato que más sirve para mejorar la detección.</p>
       <p><strong>FALSO POSITIVO</strong> cancela y el dron vuelve. La pantallita muestra la
         probabilidad, el sector y la cuenta regresiva.</p>
-      <p>Todo se compra hecho: caja estanca IP65 de 200 x 120 x 75 mm, dos pulsadores de 30 mm,
-        pantalla OLED de 1,3 pulgadas, un ESP32, un LED, un buzzer y un prensacable. La lista con qué
-        buscar está en <code>gavia-hardware/cad/blender/botonera_piezas.md</code>.</p>
+      <p>Todo se compra hecho, por unos $85.000: la misma caja Kalop de 170 x 120 x 75 mm de los drones
+        ($8.045), dos pulsadores de 30 mm ($7.498), una pantalla OLED de 1,3 pulgadas ($8.400), un LED
+        con portaled ($23.751), prensacables PG7 (pack de 20, $20.677, que también sirven para las cajas
+        del dron) y un cable USB-C de 3 m ($16.790). El ESP32 es el de repuesto del banco y el buzzer
+        sale del pack de la fase 3. La lista está en <code>gavia-hardware/cad/blender/botonera_piezas.md</code>.</p>
     </div>
     <figure><img src="../renders/gavia_botonera_1_tres_cuartos.jpg" alt="Render de la botonera"><figcaption>Render del modelo 3D.</figcaption></figure>
   </div>
 
   <h3>Después del primer prototipo</h3>
-  <figure class="grande"><img src="img/11-playa.jpg" alt="El aro flotando junto a una persona y el guardavidas entrando al agua"><figcaption>Imagen ilustrativa. El guardavidas siempre va al rescate: el dron gana tiempo.</figcaption></figure>
+  <figure class="grande corta"><img src="img/11-playa.jpg" alt="El aro flotando junto a una persona y el guardavidas entrando al agua"><figcaption>Imagen ilustrativa. El guardavidas siempre va al rescate: el dron gana tiempo.</figcaption></figure>
   <ul class="lista" style="margin-top:4mm">
-    <li>IA a bordo: una Raspberry Pi 5 con cámara para guiar el último tramo (unos USD 370).</li>
-    <li>Evaluar la cámara de la torre: cuántos píxeles ocupa una cabeza a 100 y 150 m con cada lente.</li>
-    <li>Ideas para más adelante: que el dron patrulle si puede cargarse solo, y playas sin
-      guardavidas, siempre con una persona que va al rescate desde una base.</li>
+    <li>Autonomía en escalones: simulador, vuelo atado a mano, vuelo atado con la laptop al mando y
+      vuelo libre al punto que marca la cámara. La radio queda siempre como seguro.</li>
+    <li>IA a bordo: una Raspberry Pi 5 con cámara para el último tramo (unos USD 370). Llega al
+      costado de la persona y nunca se pone en su vertical.</li>
+    <li>Evaluar la cámara de la torre y medir cuántos cuadros por segundo saca la laptop.</li>
+    <li>La v2: una estación todo en uno en la torre (cámara en un mástil, cajita con IA, carga del dron
+      y botonera) en lugar de la laptop y el celular.</li>
   </ul>
 </div>
 

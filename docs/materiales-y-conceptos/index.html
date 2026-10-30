@@ -71,8 +71,8 @@
   <p class="bajada">Qué es cada cosa del dron flotador, de qué está hecha y cómo se fabrica. Para leer
     antes de comprar, pedir o armar algo.</p>
   <figure><img src="../renders/gavia_aro_1_tres_cuartos.jpg" alt="El aro de Gavia en tres cuartos"></figure>
-  <p class="version">Versión del 30/10/2026, actualizada con las simplificaciones del plan de
-    prototipo. Se actualiza en cada sesión de trabajo. Los números son aproximados hasta medirlos en
+  <p class="version">Versión del 30/10/2026, actualizada con las simplificaciones y el ajuste de
+    gastos del plan de prototipo. Se actualiza en cada sesión de trabajo. Los números son aproximados hasta medirlos en
     banco y en pileta. Las imágenes son renders, no fotos de pruebas. El paso a paso de qué comprar y
     cómo armar está en el roadmap del prototipo.</p>
 </div>
@@ -116,7 +116,7 @@
           <rect x="17" y="0.5" width="213.2" height="1" />
         </g>
         <use href="#rej" transform="translate(0 89) scale(1 -1)"/>
-        <!-- brazo de carbono, motor y hélice -->
+        <!-- brazo, motor y hélice -->
         <line x1="17" y1="58" x2="110" y2="58" stroke="#1F1F1F" stroke-width="4" stroke-linecap="round"/>
         <rect x="109.6" y="47" width="28" height="16" rx="2" fill="#1F1F1F"/>
         <line x1="22" y1="45" x2="225.2" y2="45" stroke="#5C534A" stroke-width="2.6" stroke-linecap="round"/>
@@ -140,7 +140,7 @@
           <text x="262" y="88.8">Rejilla de abajo</text>
           <text x="-14" y="16.8" text-anchor="end">Piel</text>
           <text x="-14" y="38.8" text-anchor="end">Espuma de celda cerrada</text>
-          <text x="-14" y="60.8" text-anchor="end">Brazo de carbono</text>
+          <text x="-14" y="60.8" text-anchor="end">Brazo, caño de aluminio</text>
         </g>
         <text x="8.5" y="100" font-size="7" fill="#5C534A" text-anchor="middle">centro del aro</text>
         <text x="238.7" y="100" font-size="7" fill="#5C534A" text-anchor="middle">borde de afuera</text>
@@ -198,9 +198,11 @@
       <dt>MDF<small>fibrofácil</small></dt>
       <dd>Placa de madera prensada que se corta muy bien con láser. Todo el banco sale de dos planchas
         de 5,5 mm, como un mueble para armar con cola vinílica y unos tornillos.</dd>
-      <dt>Fibra de carbono</dt>
-      <dd>Tubos muy livianos y rígidos. Un cuadrado de tubos une los cuatro motores adentro de la
-        espuma. No va en contacto con aluminio, porque en agua salada los dos juntos se corroen.</dd>
+      <dt>Aluminio y fibra de carbono</dt>
+      <dd>Un cuadrado de caños une los cuatro motores adentro de la espuma. En el prototipo va caño de
+        aluminio de 12,7 mm: sale un tercio del carbono y, si se golpea o se agujerea mal, se dobla o
+        se cambia barato. El carbono es más rígido y queda para después. Nunca los dos juntos, porque
+        en agua salada se corroen.</dd>
     </dl>
   </section>
 
@@ -223,7 +225,7 @@
         rejillas en acrílico. Se pide con el material del taller incluido.</dd>
       <dt>Por capas</dt>
       <dd>El aro tiene 9 cm de alto y se arma con tres capas de telgopor de 30 mm. Las de arriba y abajo
-        son iguales y la del medio lleva los huecos de mano y el canal del carbono. Se pegan y se lijan.</dd>
+        son iguales y la del medio lleva los huecos de mano y el canal del cuadrado. Se pegan y se lijan.</dd>
       <dt>Modelo 3D</dt>
       <dd>El archivo con la forma exacta, hecho en Blender. De ahí salen los dibujos de cada capa y de
         cada pieza.</dd>
@@ -271,20 +273,20 @@
       <dd>Traduce la orden de la controladora en la corriente que mueve el motor. Uno por motor, o los
         cuatro en una sola placa (ESC 4 en 1) apilada con la controladora: eso es un stack, que se
         compra junto y trae el reparto de la batería. La contra: si se quema un canal, se cambia la
-        placa entera.</dd>
+        placa entera, y por eso el prototipo usa uno por motor.</dd>
       <dt>LiPo 6S</dt>
       <dd>Batería de polímero de litio con 6 celdas en serie, unos 22,2 V. Potente y delicada: se carga
         con cargador balanceador y se guarda en bolsa ignífuga.</dd>
       <dt>mAh y C<small>capacidad y descarga</small></dt>
-      <dd>5200 mAh son 5,2 A durante una hora, en teoría. La C dice cuántas veces su capacidad puede
-        entregar sin dañarse: una de 5,2 Ah y 80C entrega hasta 416 A, y el dron a fondo pide unos
+      <dd>4000 mAh son 4 A durante una hora, en teoría. La C dice cuántas veces su capacidad puede
+        entregar sin dañarse: una de 4 Ah y 65C entrega hasta 260 A, y el dron a fondo pide unos
         150 A.</dd>
       <dt>Cargador balanceador</dt>
       <dd>Carga cada celda pareja. Si una celda se pasa de carga, la batería se infla o se prende fuego.
-        El del prototipo (iMAX B6AC de 80 W) trae la fuente adentro y se enchufa directo a 220 V, así
-        nadie cablea una fuente abierta a la red.</dd>
-      <dt>XT60 y XT90</dt>
-      <dd>Las fichas de batería. El número indica la corriente que aguantan, 60 y 90 A.</dd>
+        El del prototipo (B6AC de 80 W) trae la fuente adentro y se enchufa directo a 220 V.</dd>
+      <dt>XT60, XT90 y EC5</dt>
+      <dd>Las fichas de batería. Las XT aguantan 60 y 90 A. El proyecto usa EC5, la que trae nuestra
+        batería, que aguanta más (aprox., a validar).</dd>
       <dt>Controladora de vuelo</dt>
       <dd>La placa que estabiliza el dron, con sensores de giro y aceleración. Corre ArduPilot.</dd>
       <dt>ArduPilot</dt>
@@ -293,9 +295,8 @@
       <dt>GPS con brújula</dt>
       <dd>Dice dónde está el dron y hacia dónde mira.</dd>
       <dt>Radio ELRS</dt>
-      <dd>El control remoto del piloto de seguridad, de largo alcance. El mismo enlace lleva la
-        telemetría MAVLink, el idioma con el que el dron y la laptop se pasan posición, batería y
-        estado.</dd>
+      <dd>El control remoto del piloto de seguridad. El mismo enlace lleva la telemetría MAVLink,
+        con la que el dron y la laptop se pasan posición, batería y estado.</dd>
       <dt>PDB y BEC</dt>
       <dd>La PDB reparte la batería a los cuatro ESC y mide la corriente total. En un stack ya viene en
         el ESC 4 en 1. El BEC baja el voltaje a 5 V para la electrónica chica.</dd>
@@ -321,8 +322,12 @@
         datos. La botonera del guardavidas usa la misma placa.</dd>
       <dt>Wattímetro</dt>
       <dd>Un aparatito que va entre la batería y el ESC y muestra volts, amperes y watts.</dd>
+      <dt>Probador de LiPo</dt>
+      <dd>Muestra el voltaje de cada celda y pita si una baja de 3,5 V. Descargarla de más la
+        arruina.</dd>
       <dt>Multímetro</dt>
-      <dd>Mide tensión, corriente y continuidad. Sirve para revisar soldaduras y cables.</dd>
+      <dd>Mide tensión, corriente y continuidad. Antes de enchufar algo recién soldado, en
+        continuidad entre el + y el −: si pita, hay un corto.</dd>
       <dt>Empuje/peso</dt>
       <dd>El empuje máximo de los cuatro motores dividido por el peso del dron. Con 2 o más tiene margen
         para maniobrar y pelearle al viento.</dd>
@@ -336,8 +341,7 @@
         para de canto, como una tabla agarrada de la punta. Por eso ganó el aro.</dd>
       <dt>Maqueta de pileta</dt>
       <dd>El cuerpo del aro en telgopor, sin electrónica, con pesas donde irían la batería y los
-        motores. Mide si de verdad sostiene a un adulto agarrado. Si pasa, ese mismo cuerpo es el del
-        dron.</dd>
+        motores. Mide si sostiene a un adulto agarrado. Si pasa, es el cuerpo del dron.</dd>
       <dt>IP65 e IP67</dt>
       <dd>Cuánto aguanta el agua una caja. IP65 aguanta chorros y salpicaduras, IP67 aguanta estar
         sumergida a 1 m durante 30 minutos. Las cajas del prototipo son IP65 y se prueban en la pileta.</dd>
