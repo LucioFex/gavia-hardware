@@ -50,6 +50,16 @@ medirlos en banco y en pileta. Todavía no hay piezas para imprimir.
 - [gavia-firmware](https://github.com/LucioFex/gavia-firmware): botonera ESP32 y configuración de ArduPilot
 - [gavia-hardware](https://github.com/LucioFex/gavia-hardware): modelos 3D y lista de materiales (este repo)
 
+## Con el apoyo de diVenuo
+
+<a href="https://divenuo.com"><img src="docs/marca/divenuo.png" alt="diVenuo" width="180"></a>
+
+Gavia es un proyecto del equipo, liderado por Luciano Esteban, con el apoyo de
+[diVenuo](https://divenuo.com). diVenuo no vende ni certifica el dron.
+
+El nombre y el logo de diVenuo no entran en la licencia de este repo. Para usarlos en una versión
+propia de Gavia hace falta permiso.
+
 ## Licencia
 
 [CERN-OHL-P-2.0](LICENSE), una licencia permisiva de hardware abierto. Copyright 2026 Luciano
